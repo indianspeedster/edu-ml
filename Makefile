@@ -12,5 +12,5 @@ final_notebook.ipynb: markdown/*.md
 final_notebook_augmentation.ipynb: markdown/*.md
 	pandoc --resource-path=../ --embed-resources --standalone --wrap=none \
                 -i markdown/notebook_augmentation.md \
-                -o final_notebook_augmentation.ipynb  
-	sed -i 's/attachment://g' final_notebook_augmentation.ipynb
+                -o notebooks/final_notebook_augmentation.ipynb  
+	sed -i 's/attachment://g' notebooks/final_notebook_augmentation.ipynb
