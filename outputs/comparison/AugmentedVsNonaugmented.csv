@@ -1,0 +1,147 @@
+,speech_text,intent,prediction_non_augmented,prediction_augmented
+42,change my alarms to mountain time,2,0,1
+50,please talk softer,3,4,3
+63,turn off media volume,4,3,4
+66,no notifications for five minutes,4,1,4
+67,turn off the sound,4,30,4
+72,could you speak a little more softly,5,4,3
+85,when is the school dance junction marked,6,49,54
+93,is there anything i need to be aware of,6,20,0
+94,do i have any undone tasks,6,36,24
+95,what is left for today,6,36,6
+102,what day of the week is my birthday this year,6,11,6
+105,format the calendar,7,7,8
+107,delete event from mine,7,37,7
+115,remove upcoming task,7,37,7
+129,blot me all the phone calls planned for the morning of twenty three march,8,6,8
+130,can you remind me about my meeting tomorrow,8,6,8
+133,next week my uncle birthday,8,8,6
+149,please cook me a hamburger,9,9,57
+163,can you please change the time zone to us,10,10,11
+166,what time will it be locally at nine am bangalore india time,10,11,10
+168,change mountain standard to pacific,10,28,10
+169,please tell me the date,11,11,6
+170,date today,11,11,6
+171,what is today,11,11,6
+178,which date is on next monday,11,11,6
+184,what day of the week does the next holiday fall on,11,11,6
+186,can you tell me the date today,11,11,6
+198,refresh email,13,12,15
+199,i need to know all of the emails from contact pertaining to subject,13,13,14
+200,open email,13,13,15
+211,carlos linux upgrade email,13,12,15
+222,does contact mona has an email as well,14,13,12
+226,select the contact,14,14,12
+238,send new email to jana dot litt at gmail dot com,15,12,15
+243,jj.nzt@yahoo dot com,15,12,55
+260,perfect response to command.,16,16,22
+266,you got the command right.,16,16,22
+278,i like you cancel.,17,7,17
+280,would you cancel it please.,17,7,17
+283,olly will you cancel please.,17,4,17
+288,will you cancel it.,17,7,17
+303,did you get what just said correctly?,18,22,20
+304,did you get what said correctly?,18,22,20
+331,your words is not so clear.,20,20,22
+340,i didn't get your response.,20,20,22
+342,what you said now was not clear.,20,20,22
+347,didn't understand what you said now.,20,20,22
+381,ah that's nice one.,23,23,16
+398,today i had a lunch with my longtime sweetheart play me a nice song to the mood,24,38,44
+399,what's on tv,24,54,41
+400,is the data prefers any problems in objects,24,49,24
+401,your salary,24,51,47
+402,overall day,24,6,63
+413,where did he was yesterday,24,49,14
+416,give me the product review from gamespot about the nintendo switch,24,55,56
+423,retry please.,25,40,25
+448,turn on the roomba,26,34,26
+475,set the mood please,28,42,2
+478,make curser adjustable position,28,33,34
+484,can you set the living room lights to pink,28,32,28
+486,let's have a warm glow in the front room,28,32,31
+488,change my light color to blue and please turn off the kitchen light,28,28,30
+499,light is too much,29,29,31
+509,power off the current,30,33,1
+511,by main power off,30,30,33
+529,can you turn up the lights,32,31,32
+556,create a blank list,35,35,37
+573,open google keep,36,13,56
+576,did i put toothpaste on my pick up list,36,35,36
+596,please delete what i just typed,37,37,55
+597,take bread out from the shopping list,37,35,37
+601,get rid of peas,37,7,1
+614,add song to running list,38,35,38
+616,add this channel to pandora,38,55,46
+618,i like it,38,16,38
+625,all i ever want to hear is rap,38,38,40
+627,please thumbs up this song,38,38,40
+633,when did pop it like it's hot come out,39,9,49
+638,song info,39,40,39
+639,what list is available for my favorite music from ed sheeran,39,44,39
+640,who is this,39,14,49
+641,list of playback of ar rahman collections,39,44,39
+645,can you locate some gospel music for me,39,38,44
+647,music traking,39,44,40
+658,what is the seattle city council doing about homelessness,41,62,52
+662,please keep tabs on how the presidential debates are going,41,41,52
+669,find me info on cars,41,59,24
+678,start playing american gods where i last stopped,42,43,54
+679,play from my last session of joes book,42,42,44
+683,can you play file,42,43,44
+684,audio,42,5,40
+698,let's play,43,43,44
+701,anyone for tennis,43,52,43
+704,we should play nfs at high speed,43,43,44
+707,bring up papa pear saga,43,42,43
+710,paper scissors or stone,43,9,48
+713,i would like to hear the theme song to this is us,44,38,44
+714,play the list from my favorites,44,44,38
+718,play jumper by third eye blind,44,42,44
+720,please turn on my music,44,5,44
+723,play true love next,44,43,44
+728,play jingle bells next,44,44,46
+730,play all third day,44,7,44
+736,play my play list,45,45,39
+744,can you play back to december,45,43,44
+746,skip this episode,45,7,45
+747,skip this one,45,37,40
+750,play radia,46,43,46
+751,play nine hundred and seventy one,46,42,44
+778,u. s. d. to g. b. p.,47,51,10
+806,what does a grapefruit look like,48,9,48
+807,what year what the eiffel tower built,49,11,49
+808,when does the super bowl officially start,49,49,54
+815,when is shakira's birthday,49,11,6
+816,please tell me about the historic facts about india,49,49,24
+821,calculate distance from boston to new york,49,59,10
+831,convert ten inches to centimeters,50,10,50
+832,what is the answer to this math question,50,50,48
+834,how many inches make one feet,50,49,50
+848,what is the value of apple,51,48,47
+860,let me see cultural events for this weekend in palermo neighborhood,52,24,52
+861,what are the concerts happening nearby,52,54,52
+862,is there any type of festival going on in town this weekend,52,6,52
+863,show me painting exhibition in bay area,52,24,52
+864,are there any fun things to do in seattle this weekend,52,24,52
+865,what's going on,52,41,52
+870,what do they have going on for festivals downtown,52,6,52
+871,could you list out the information on book fairs in washington dc for next week,52,6,52
+873,when is the yearly cultural event coming up,52,6,52
+877,give me the list of circus shows going on in the city right now,52,54,52
+882,i'm looking for a casual restaurant for a dinner date,53,53,57
+912,tell comcast i am still on hold,55,4,46
+914,post new status,55,37,12
+957,what takeout places are near me,57,58,53
+963,where can i order pizza for delivery,58,57,58
+982,where can i book a train ticket to oregon,59,61,59
+983,navigation search,59,59,62
+987,how far away is the nearest rest stop,59,59,53
+999,train leaving,59,59,61
+1036,get me a ride on the commuter train from nj to ny,61,60,61
+1038,is it possible to drive now in ohio,62,59,62
+1057,do i have to bring umbrella for tonight party,63,24,60
+1058,should i wear gloves tonight,63,26,48
+1063,is summer going on,63,63,54
+1064,do you think i can wear sandals or should i wear sneakers tonight at seven pm,63,24,48
+1068,do i need to wear sunscreen today,63,63,48

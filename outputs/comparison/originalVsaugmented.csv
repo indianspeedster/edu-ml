@@ -1,0 +1,151 @@
+,speech_text,intent,prediction_non_augmented,prediction_augmented
+42,change my alarms to mountain time,2,0,1
+72,could you speak a little more softly,5,4,3
+85,when is the school dance junction marked,6,49,54
+88,do i have any notifications from social media,6,56,56
+93,is there anything i need to be aware of,6,20,0
+94,do i have any undone tasks,6,36,24
+96,list out my upcoming events,6,52,52
+97,one thousand two hundred and thirty pm already you will have a meeting in ten mins,6,8,8
+105,format the calendar,7,7,8
+124,notify me when the event is going to take place,8,6,6
+133,next week my uncle birthday,8,8,6
+137,remind me about the meeting,8,6,6
+138,set the alarm in my calendar events before five mins,8,2,2
+149,please cook me a hamburger,9,9,57
+163,can you please change the time zone to us,10,10,11
+169,please tell me the date,11,11,6
+170,date today,11,11,6
+171,what is today,11,11,6
+175,what is the time difference between here and dakar,11,10,10
+178,which date is on next monday,11,11,6
+180,what time is it in the other time zones,11,10,10
+184,what day of the week does the next holiday fall on,11,11,6
+186,can you tell me the date today,11,11,6
+187,hey what's today's date,11,6,6
+198,refresh email,13,12,15
+199,i need to know all of the emails from contact pertaining to subject,13,13,14
+200,open email,13,13,15
+211,carlos linux upgrade email,13,12,15
+217,have you responded my phone calls,14,13,13
+222,does contact mona has an email as well,14,13,12
+226,select the contact,14,14,12
+228,how old is mary s.,14,49,49
+229,did mom text me,14,13,13
+230,please let me know where david is travelling,14,59,59
+232,add rebecca green to my list of favorite contacts,14,12,12
+240,send email to new email address,15,12,12
+243,jj.nzt@yahoo dot com,15,12,55
+251,email tom the date and time of tomorrow's meeting,15,8,8
+252,add mail id subject content,15,12,12
+260,perfect response to command.,16,16,22
+266,you got the command right.,16,16,22
+303,did you get what just said correctly?,18,22,20
+304,did you get what said correctly?,18,22,20
+331,your words is not so clear.,20,20,22
+340,i didn't get your response.,20,20,22
+342,what you said now was not clear.,20,20,22
+344,do not get this.,20,22,22
+347,didn't understand what you said now.,20,20,22
+381,ah that's nice one.,23,23,16
+398,today i had a lunch with my longtime sweetheart play me a nice song to the mood,24,38,44
+399,what's on tv,24,54,41
+401,your salary,24,51,47
+402,overall day,24,6,63
+404,is mile marker sixty five where the hanging tree is located,24,49,49
+405,tell me what happens when we die,24,49,49
+406,what is your country,24,49,49
+407,do i need to spare washing my car today,24,26,26
+409,can you explain me the problems when the syria becomes more stronger than america,24,49,49
+410,you are chatbot,24,55,55
+411,how high is the quality of this stone,24,49,49
+412,can you please tell me who are you,24,49,49
+413,where did he was yesterday,24,49,14
+414,have you come across any new recipes,24,9,9
+416,give me the product review from gamespot about the nintendo switch,24,55,56
+468,make me a capuccino,27,57,57
+471,please make the lights natural,28,32,32
+472,lights to fifty percent,28,32,32
+474,turn the lights on party mode,28,31,31
+475,set the mood please,28,42,2
+478,make curser adjustable position,28,33,34
+486,let's have a warm glow in the front room,28,32,31
+488,change my light color to blue and please turn off the kitchen light,28,28,30
+499,light is too much,29,29,31
+509,power off the current,30,33,1
+511,by main power off,30,30,33
+530,i would like all the lights on when i enter,32,31,31
+533,raise all the lights on,32,31,31
+536,increase,32,5,5
+556,create a blank list,35,35,37
+573,open google keep,36,13,56
+589,what is on my playlist,36,39,39
+591,whats the schedule for today,36,6,6
+596,please delete what i just typed,37,37,55
+601,get rid of peas,37,7,1
+616,add this channel to pandora,38,55,46
+623,what is in my favorites music folder,38,39,39
+625,all i ever want to hear is rap,38,38,40
+627,please thumbs up this song,38,38,40
+633,when did pop it like it's hot come out,39,9,49
+640,who is this,39,14,49
+645,can you locate some gospel music for me,39,38,44
+647,music traking,39,44,40
+656,what were the cities affected by the earthquake,41,49,49
+658,what is the seattle city council doing about homelessness,41,62,52
+662,please keep tabs on how the presidential debates are going,41,41,52
+663,what's happening around the world,41,52,52
+669,find me info on cars,41,59,24
+675,pause resume,42,4,4
+678,start playing american gods where i last stopped,42,43,54
+679,play from my last session of joes book,42,42,44
+683,can you play file,42,43,44
+684,audio,42,5,40
+696,give me a company for playing football,43,24,24
+698,let's play,43,43,44
+704,we should play nfs at high speed,43,43,44
+710,paper scissors or stone,43,9,48
+714,play the list from my favorites,44,44,38
+722,after this song play atmosphere,44,40,40
+728,play jingle bells next,44,44,46
+736,play my play list,45,45,39
+744,can you play back to december,45,43,44
+747,skip this one,45,37,40
+751,play nine hundred and seventy one,46,42,44
+757,show me upcoming programmes on one hundred and five point one,46,54,54
+760,please play some songs for kids,46,44,44
+778,u. s. d. to g. b. p.,47,51,10
+793,what do you know about the statue of liberty,48,49,49
+808,when does the super bowl officially start,49,49,54
+809,how many months in a year,49,11,11
+815,when is shakira's birthday,49,11,6
+816,please tell me about the historic facts about india,49,49,24
+820,info on lisa ann please,49,14,14
+821,calculate distance from boston to new york,49,59,10
+822,what year did george clooney start acting,49,54,54
+832,what is the answer to this math question,50,50,48
+848,what is the value of apple,51,48,47
+869,what is playing at the local theater right now,52,54,54
+875,What event do you suggest for me tonight,52,6,6
+882,i'm looking for a casual restaurant for a dinner date,53,53,57
+892,where is mcdo,53,49,49
+912,tell comcast i am still on hold,55,4,46
+914,post new status,55,37,12
+954,is there any good chinese takeout that's open late,57,58,58
+957,what takeout places are near me,57,58,53
+967,how long until i receive my food,58,9,9
+974,restaurant order status,58,57,57
+983,navigation search,59,59,62
+987,how far away is the nearest rest stop,59,59,53
+995,when i should leave to office,59,6,6
+999,train leaving,59,59,61
+1020,find out the the train arrival time and book me,61,59,59
+1042,are there are any delays on my commute,62,59,59
+1057,do i have to bring umbrella for tonight party,63,24,60
+1058,should i wear gloves tonight,63,26,48
+1063,is summer going on,63,63,54
+1064,do you think i can wear sandals or should i wear sneakers tonight at seven pm,63,24,48
+1067,will i need my snow boots this afternoon,63,26,26
+1068,do i need to wear sunscreen today,63,63,48
+1073,i am gonna need an umbrella today after sunset,63,60,60
+1075,are there any tornado warnings today,63,0,0
