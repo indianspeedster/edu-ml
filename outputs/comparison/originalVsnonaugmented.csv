@@ -1,164 +1,164 @@
 ,speech_text,intent,prediction_non_augmented,prediction_augmented
-42,change my alarms to mountain time,2,0,1
-50,please talk softer,3,4,3
-63,turn off media volume,4,3,4
-66,no notifications for five minutes,4,1,4
-67,turn off the sound,4,30,4
-72,could you speak a little more softly,5,4,3
-85,when is the school dance junction marked,6,49,54
-88,do i have any notifications from social media,6,56,56
-93,is there anything i need to be aware of,6,20,0
-94,do i have any undone tasks,6,36,24
-95,what is left for today,6,36,6
-96,list out my upcoming events,6,52,52
-97,one thousand two hundred and thirty pm already you will have a meeting in ten mins,6,8,8
-102,what day of the week is my birthday this year,6,11,6
-107,delete event from mine,7,37,7
-115,remove upcoming task,7,37,7
-124,notify me when the event is going to take place,8,6,6
-129,blot me all the phone calls planned for the morning of twenty three march,8,6,8
-130,can you remind me about my meeting tomorrow,8,6,8
-137,remind me about the meeting,8,6,6
-138,set the alarm in my calendar events before five mins,8,2,2
-166,what time will it be locally at nine am bangalore india time,10,11,10
-168,change mountain standard to pacific,10,28,10
-175,what is the time difference between here and dakar,11,10,10
-180,what time is it in the other time zones,11,10,10
-187,hey what's today's date,11,6,6
-198,refresh email,13,12,15
-211,carlos linux upgrade email,13,12,15
-217,have you responded my phone calls,14,13,13
-222,does contact mona has an email as well,14,13,12
-228,how old is mary s.,14,49,49
-229,did mom text me,14,13,13
-230,please let me know where david is travelling,14,59,59
-232,add rebecca green to my list of favorite contacts,14,12,12
-238,send new email to jana dot litt at gmail dot com,15,12,15
-240,send email to new email address,15,12,12
-243,jj.nzt@yahoo dot com,15,12,55
-251,email tom the date and time of tomorrow's meeting,15,8,8
-252,add mail id subject content,15,12,12
-278,i like you cancel.,17,7,17
-280,would you cancel it please.,17,7,17
-283,olly will you cancel please.,17,4,17
-288,will you cancel it.,17,7,17
-303,did you get what just said correctly?,18,22,20
-304,did you get what said correctly?,18,22,20
-344,do not get this.,20,22,22
-398,today i had a lunch with my longtime sweetheart play me a nice song to the mood,24,38,44
-399,what's on tv,24,54,41
-400,is the data prefers any problems in objects,24,49,24
-401,your salary,24,51,47
-402,overall day,24,6,63
-404,is mile marker sixty five where the hanging tree is located,24,49,49
-405,tell me what happens when we die,24,49,49
-406,what is your country,24,49,49
-407,do i need to spare washing my car today,24,26,26
-409,can you explain me the problems when the syria becomes more stronger than america,24,49,49
-410,you are chatbot,24,55,55
-411,how high is the quality of this stone,24,49,49
-412,can you please tell me who are you,24,49,49
-413,where did he was yesterday,24,49,14
-414,have you come across any new recipes,24,9,9
-416,give me the product review from gamespot about the nintendo switch,24,55,56
-423,retry please.,25,40,25
-448,turn on the roomba,26,34,26
-468,make me a capuccino,27,57,57
-471,please make the lights natural,28,32,32
-472,lights to fifty percent,28,32,32
-474,turn the lights on party mode,28,31,31
-475,set the mood please,28,42,2
-478,make curser adjustable position,28,33,34
-484,can you set the living room lights to pink,28,32,28
-486,let's have a warm glow in the front room,28,32,31
-509,power off the current,30,33,1
-529,can you turn up the lights,32,31,32
-530,i would like all the lights on when i enter,32,31,31
-533,raise all the lights on,32,31,31
-536,increase,32,5,5
-573,open google keep,36,13,56
-576,did i put toothpaste on my pick up list,36,35,36
-589,what is on my playlist,36,39,39
-591,whats the schedule for today,36,6,6
-597,take bread out from the shopping list,37,35,37
-601,get rid of peas,37,7,1
-614,add song to running list,38,35,38
-616,add this channel to pandora,38,55,46
-618,i like it,38,16,38
-623,what is in my favorites music folder,38,39,39
-633,when did pop it like it's hot come out,39,9,49
-638,song info,39,40,39
-639,what list is available for my favorite music from ed sheeran,39,44,39
-640,who is this,39,14,49
-641,list of playback of ar rahman collections,39,44,39
-645,can you locate some gospel music for me,39,38,44
-647,music traking,39,44,40
-656,what were the cities affected by the earthquake,41,49,49
-658,what is the seattle city council doing about homelessness,41,62,52
-663,what's happening around the world,41,52,52
-669,find me info on cars,41,59,24
-675,pause resume,42,4,4
-678,start playing american gods where i last stopped,42,43,54
-683,can you play file,42,43,44
-684,audio,42,5,40
-696,give me a company for playing football,43,24,24
-701,anyone for tennis,43,52,43
-707,bring up papa pear saga,43,42,43
-710,paper scissors or stone,43,9,48
-713,i would like to hear the theme song to this is us,44,38,44
-718,play jumper by third eye blind,44,42,44
-720,please turn on my music,44,5,44
-722,after this song play atmosphere,44,40,40
-723,play true love next,44,43,44
-730,play all third day,44,7,44
-744,can you play back to december,45,43,44
-746,skip this episode,45,7,45
-747,skip this one,45,37,40
-750,play radia,46,43,46
-751,play nine hundred and seventy one,46,42,44
-757,show me upcoming programmes on one hundred and five point one,46,54,54
-760,please play some songs for kids,46,44,44
-778,u. s. d. to g. b. p.,47,51,10
-793,what do you know about the statue of liberty,48,49,49
-806,what does a grapefruit look like,48,9,48
-807,what year what the eiffel tower built,49,11,49
-809,how many months in a year,49,11,11
-815,when is shakira's birthday,49,11,6
-820,info on lisa ann please,49,14,14
-821,calculate distance from boston to new york,49,59,10
-822,what year did george clooney start acting,49,54,54
-831,convert ten inches to centimeters,50,10,50
-834,how many inches make one feet,50,49,50
-848,what is the value of apple,51,48,47
-860,let me see cultural events for this weekend in palermo neighborhood,52,24,52
-861,what are the concerts happening nearby,52,54,52
-862,is there any type of festival going on in town this weekend,52,6,52
-863,show me painting exhibition in bay area,52,24,52
-864,are there any fun things to do in seattle this weekend,52,24,52
-865,what's going on,52,41,52
-869,what is playing at the local theater right now,52,54,54
-870,what do they have going on for festivals downtown,52,6,52
-871,could you list out the information on book fairs in washington dc for next week,52,6,52
-873,when is the yearly cultural event coming up,52,6,52
-875,What event do you suggest for me tonight,52,6,6
-877,give me the list of circus shows going on in the city right now,52,54,52
-892,where is mcdo,53,49,49
-912,tell comcast i am still on hold,55,4,46
-914,post new status,55,37,12
-954,is there any good chinese takeout that's open late,57,58,58
-957,what takeout places are near me,57,58,53
-963,where can i order pizza for delivery,58,57,58
-967,how long until i receive my food,58,9,9
-974,restaurant order status,58,57,57
-982,where can i book a train ticket to oregon,59,61,59
-995,when i should leave to office,59,6,6
-1020,find out the the train arrival time and book me,61,59,59
-1036,get me a ride on the commuter train from nj to ny,61,60,61
-1038,is it possible to drive now in ohio,62,59,62
-1042,are there are any delays on my commute,62,59,59
-1057,do i have to bring umbrella for tonight party,63,24,60
-1058,should i wear gloves tonight,63,26,48
-1064,do you think i can wear sandals or should i wear sneakers tonight at seven pm,63,24,48
-1067,will i need my snow boots this afternoon,63,26,26
-1073,i am gonna need an umbrella today after sunset,63,60,60
-1075,are there any tornado warnings today,63,0,0
+42,change my alarms to mountain time,alarm_set,alarm_query,alarm_remove
+50,please talk softer,audio_volume_down,audio_volume_mute,audio_volume_down
+63,turn off media volume,audio_volume_mute,audio_volume_down,audio_volume_mute
+66,no notifications for five minutes,audio_volume_mute,alarm_remove,audio_volume_mute
+67,turn off the sound,audio_volume_mute,iot_hue_lightoff,audio_volume_mute
+72,could you speak a little more softly,audio_volume_up,audio_volume_mute,audio_volume_down
+85,when is the school dance junction marked,calendar_query,qa_factoid,recommendation_movies
+88,do i have any notifications from social media,calendar_query,social_query,social_query
+93,is there anything i need to be aware of,calendar_query,general_explain,alarm_query
+94,do i have any undone tasks,calendar_query,lists_query,general_quirky
+95,what is left for today,calendar_query,lists_query,calendar_query
+96,list out my upcoming events,calendar_query,recommendation_events,recommendation_events
+97,one thousand two hundred and thirty pm already you will have a meeting in ten mins,calendar_query,calendar_set,calendar_set
+102,what day of the week is my birthday this year,calendar_query,datetime_query,calendar_query
+107,delete event from mine,calendar_remove,lists_remove,calendar_remove
+115,remove upcoming task,calendar_remove,lists_remove,calendar_remove
+124,notify me when the event is going to take place,calendar_set,calendar_query,calendar_query
+129,blot me all the phone calls planned for the morning of twenty three march,calendar_set,calendar_query,calendar_set
+130,can you remind me about my meeting tomorrow,calendar_set,calendar_query,calendar_set
+137,remind me about the meeting,calendar_set,calendar_query,calendar_query
+138,set the alarm in my calendar events before five mins,calendar_set,alarm_set,alarm_set
+166,what time will it be locally at nine am bangalore india time,datetime_convert,datetime_query,datetime_convert
+168,change mountain standard to pacific,datetime_convert,iot_hue_lightchange,datetime_convert
+175,what is the time difference between here and dakar,datetime_query,datetime_convert,datetime_convert
+180,what time is it in the other time zones,datetime_query,datetime_convert,datetime_convert
+187,hey what's today's date,datetime_query,calendar_query,calendar_query
+198,refresh email,email_query,email_addcontact,email_sendemail
+211,carlos linux upgrade email,email_query,email_addcontact,email_sendemail
+217,have you responded my phone calls,email_querycontact,email_query,email_query
+222,does contact mona has an email as well,email_querycontact,email_query,email_addcontact
+228,how old is mary s.,email_querycontact,qa_factoid,qa_factoid
+229,did mom text me,email_querycontact,email_query,email_query
+230,please let me know where david is travelling,email_querycontact,transport_query,transport_query
+232,add rebecca green to my list of favorite contacts,email_querycontact,email_addcontact,email_addcontact
+238,send new email to jana dot litt at gmail dot com,email_sendemail,email_addcontact,email_sendemail
+240,send email to new email address,email_sendemail,email_addcontact,email_addcontact
+243,jj.nzt@yahoo dot com,email_sendemail,email_addcontact,social_post
+251,email tom the date and time of tomorrow's meeting,email_sendemail,calendar_set,calendar_set
+252,add mail id subject content,email_sendemail,email_addcontact,email_addcontact
+278,i like you cancel.,general_commandstop,calendar_remove,general_commandstop
+280,would you cancel it please.,general_commandstop,calendar_remove,general_commandstop
+283,olly will you cancel please.,general_commandstop,audio_volume_mute,general_commandstop
+288,will you cancel it.,general_commandstop,calendar_remove,general_commandstop
+303,did you get what just said correctly?,general_confirm,general_negate,general_explain
+304,did you get what said correctly?,general_confirm,general_negate,general_explain
+344,do not get this.,general_explain,general_negate,general_negate
+398,today i had a lunch with my longtime sweetheart play me a nice song to the mood,general_quirky,music_likeness,play_music
+399,what's on tv,general_quirky,recommendation_movies,news_query
+400,is the data prefers any problems in objects,general_quirky,qa_factoid,general_quirky
+401,your salary,general_quirky,qa_stock,qa_currency
+402,overall day,general_quirky,calendar_query,weather_query
+404,is mile marker sixty five where the hanging tree is located,general_quirky,qa_factoid,qa_factoid
+405,tell me what happens when we die,general_quirky,qa_factoid,qa_factoid
+406,what is your country,general_quirky,qa_factoid,qa_factoid
+407,do i need to spare washing my car today,general_quirky,iot_cleaning,iot_cleaning
+409,can you explain me the problems when the syria becomes more stronger than america,general_quirky,qa_factoid,qa_factoid
+410,you are chatbot,general_quirky,social_post,social_post
+411,how high is the quality of this stone,general_quirky,qa_factoid,qa_factoid
+412,can you please tell me who are you,general_quirky,qa_factoid,qa_factoid
+413,where did he was yesterday,general_quirky,qa_factoid,email_querycontact
+414,have you come across any new recipes,general_quirky,cooking_recipe,cooking_recipe
+416,give me the product review from gamespot about the nintendo switch,general_quirky,social_post,social_query
+423,retry please.,general_repeat,music_settings,general_repeat
+448,turn on the roomba,iot_cleaning,iot_wemo_on,iot_cleaning
+468,make me a capuccino,iot_coffee,takeaway_order,takeaway_order
+471,please make the lights natural,iot_hue_lightchange,iot_hue_lightup,iot_hue_lightup
+472,lights to fifty percent,iot_hue_lightchange,iot_hue_lightup,iot_hue_lightup
+474,turn the lights on party mode,iot_hue_lightchange,iot_hue_lighton,iot_hue_lighton
+475,set the mood please,iot_hue_lightchange,play_audiobook,alarm_set
+478,make curser adjustable position,iot_hue_lightchange,iot_wemo_off,iot_wemo_on
+484,can you set the living room lights to pink,iot_hue_lightchange,iot_hue_lightup,iot_hue_lightchange
+486,let's have a warm glow in the front room,iot_hue_lightchange,iot_hue_lightup,iot_hue_lighton
+509,power off the current,iot_hue_lightoff,iot_wemo_off,alarm_remove
+529,can you turn up the lights,iot_hue_lightup,iot_hue_lighton,iot_hue_lightup
+530,i would like all the lights on when i enter,iot_hue_lightup,iot_hue_lighton,iot_hue_lighton
+533,raise all the lights on,iot_hue_lightup,iot_hue_lighton,iot_hue_lighton
+536,increase,iot_hue_lightup,audio_volume_up,audio_volume_up
+573,open google keep,lists_query,email_query,social_query
+576,did i put toothpaste on my pick up list,lists_query,lists_createoradd,lists_query
+589,what is on my playlist,lists_query,music_query,music_query
+591,whats the schedule for today,lists_query,calendar_query,calendar_query
+597,take bread out from the shopping list,lists_remove,lists_createoradd,lists_remove
+601,get rid of peas,lists_remove,calendar_remove,alarm_remove
+614,add song to running list,music_likeness,lists_createoradd,music_likeness
+616,add this channel to pandora,music_likeness,social_post,play_radio
+618,i like it,music_likeness,general_affirm,music_likeness
+623,what is in my favorites music folder,music_likeness,music_query,music_query
+633,when did pop it like it's hot come out,music_query,cooking_recipe,qa_factoid
+638,song info,music_query,music_settings,music_query
+639,what list is available for my favorite music from ed sheeran,music_query,play_music,music_query
+640,who is this,music_query,email_querycontact,qa_factoid
+641,list of playback of ar rahman collections,music_query,play_music,music_query
+645,can you locate some gospel music for me,music_query,music_likeness,play_music
+647,music traking,music_query,play_music,music_settings
+656,what were the cities affected by the earthquake,news_query,qa_factoid,qa_factoid
+658,what is the seattle city council doing about homelessness,news_query,transport_traffic,recommendation_events
+663,what's happening around the world,news_query,recommendation_events,recommendation_events
+669,find me info on cars,news_query,transport_query,general_quirky
+675,pause resume,play_audiobook,audio_volume_mute,audio_volume_mute
+678,start playing american gods where i last stopped,play_audiobook,play_game,recommendation_movies
+683,can you play file,play_audiobook,play_game,play_music
+684,audio,play_audiobook,audio_volume_up,music_settings
+696,give me a company for playing football,play_game,general_quirky,general_quirky
+701,anyone for tennis,play_game,recommendation_events,play_game
+707,bring up papa pear saga,play_game,play_audiobook,play_game
+710,paper scissors or stone,play_game,cooking_recipe,qa_definition
+713,i would like to hear the theme song to this is us,play_music,music_likeness,play_music
+718,play jumper by third eye blind,play_music,play_audiobook,play_music
+720,please turn on my music,play_music,audio_volume_up,play_music
+722,after this song play atmosphere,play_music,music_settings,music_settings
+723,play true love next,play_music,play_game,play_music
+730,play all third day,play_music,calendar_remove,play_music
+744,can you play back to december,play_podcasts,play_game,play_music
+746,skip this episode,play_podcasts,calendar_remove,play_podcasts
+747,skip this one,play_podcasts,lists_remove,music_settings
+750,play radia,play_radio,play_game,play_radio
+751,play nine hundred and seventy one,play_radio,play_audiobook,play_music
+757,show me upcoming programmes on one hundred and five point one,play_radio,recommendation_movies,recommendation_movies
+760,please play some songs for kids,play_radio,play_music,play_music
+778,u. s. d. to g. b. p.,qa_currency,qa_stock,datetime_convert
+793,what do you know about the statue of liberty,qa_definition,qa_factoid,qa_factoid
+806,what does a grapefruit look like,qa_definition,cooking_recipe,qa_definition
+807,what year what the eiffel tower built,qa_factoid,datetime_query,qa_factoid
+809,how many months in a year,qa_factoid,datetime_query,datetime_query
+815,when is shakira's birthday,qa_factoid,datetime_query,calendar_query
+820,info on lisa ann please,qa_factoid,email_querycontact,email_querycontact
+821,calculate distance from boston to new york,qa_factoid,transport_query,datetime_convert
+822,what year did george clooney start acting,qa_factoid,recommendation_movies,recommendation_movies
+831,convert ten inches to centimeters,qa_maths,datetime_convert,qa_maths
+834,how many inches make one feet,qa_maths,qa_factoid,qa_maths
+848,what is the value of apple,qa_stock,qa_definition,qa_currency
+860,let me see cultural events for this weekend in palermo neighborhood,recommendation_events,general_quirky,recommendation_events
+861,what are the concerts happening nearby,recommendation_events,recommendation_movies,recommendation_events
+862,is there any type of festival going on in town this weekend,recommendation_events,calendar_query,recommendation_events
+863,show me painting exhibition in bay area,recommendation_events,general_quirky,recommendation_events
+864,are there any fun things to do in seattle this weekend,recommendation_events,general_quirky,recommendation_events
+865,what's going on,recommendation_events,news_query,recommendation_events
+869,what is playing at the local theater right now,recommendation_events,recommendation_movies,recommendation_movies
+870,what do they have going on for festivals downtown,recommendation_events,calendar_query,recommendation_events
+871,could you list out the information on book fairs in washington dc for next week,recommendation_events,calendar_query,recommendation_events
+873,when is the yearly cultural event coming up,recommendation_events,calendar_query,recommendation_events
+875,What event do you suggest for me tonight,recommendation_events,calendar_query,calendar_query
+877,give me the list of circus shows going on in the city right now,recommendation_events,recommendation_movies,recommendation_events
+892,where is mcdo,recommendation_locations,qa_factoid,qa_factoid
+912,tell comcast i am still on hold,social_post,audio_volume_mute,play_radio
+914,post new status,social_post,lists_remove,email_addcontact
+954,is there any good chinese takeout that's open late,takeaway_order,takeaway_query,takeaway_query
+957,what takeout places are near me,takeaway_order,takeaway_query,recommendation_locations
+963,where can i order pizza for delivery,takeaway_query,takeaway_order,takeaway_query
+967,how long until i receive my food,takeaway_query,cooking_recipe,cooking_recipe
+974,restaurant order status,takeaway_query,takeaway_order,takeaway_order
+982,where can i book a train ticket to oregon,transport_query,transport_ticket,transport_query
+995,when i should leave to office,transport_query,calendar_query,calendar_query
+1020,find out the the train arrival time and book me,transport_ticket,transport_query,transport_query
+1036,get me a ride on the commuter train from nj to ny,transport_ticket,transport_taxi,transport_ticket
+1038,is it possible to drive now in ohio,transport_traffic,transport_query,transport_traffic
+1042,are there are any delays on my commute,transport_traffic,transport_query,transport_query
+1057,do i have to bring umbrella for tonight party,weather_query,general_quirky,transport_taxi
+1058,should i wear gloves tonight,weather_query,iot_cleaning,qa_definition
+1064,do you think i can wear sandals or should i wear sneakers tonight at seven pm,weather_query,general_quirky,qa_definition
+1067,will i need my snow boots this afternoon,weather_query,iot_cleaning,iot_cleaning
+1073,i am gonna need an umbrella today after sunset,weather_query,transport_taxi,transport_taxi
+1075,are there any tornado warnings today,weather_query,alarm_query,alarm_query
