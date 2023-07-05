@@ -20,7 +20,7 @@
 
 ## Augmentation using SR (Synonym Replacement)
 - Replace "n" non-stop words randomly using the formula n = alpha * length. Length should be the length of non-stop words.
-- Apply the above function to the speech_text, and the count of the total words would be doubled.
+- Apply the above function to the speech_text.
 - Create a dataset object of 20 samples of each intent where 10 are the original intent and 10 are the augmented version.
 - Train using a 3-fold cv.
 
