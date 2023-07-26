@@ -5,8 +5,8 @@ This research paper uses a powerful technique called full few-shot learning to e
 We decided to train an Intent classifier, where the intent is a type of request that a conversational agent supports eg: the user can ask the agent to set an Alarm, play music, etc. To understand in-depth and compare results we considered training 3 different Intent classifiers.
 
 - Classifier built on Full data.
-- Classifier build on full few-shot data. (10 samples of each intent)
-- Classifier built on full few-shot data and augmented data. (10 samples of each intent and an augmented version of the same)
+- Classifier build on full few-shot data. 
+- Classifier built on full few-shot data and augmented data.
 
 One of the important tasks in the process was to decide on an augmentation strategy, Augmentation can be not that difficult when it is done on Image data but when it comes to language data, augmentation can be a daunting task where you have to make sure that the context in the language remains the same.
 In our case, we followed **Synonym Replacement**, The idea was to replace the words in the speech text with their synonyms but the issue was if we replace all the words with their synonyms then there are high chances that the context won't remain the same. so to avoid this we came up with the idea of randomly choosing n words from the sentence that are not stop words and replacing each of these words with one of its synonyms chosen at random.
@@ -43,5 +43,14 @@ For our intent classification model, we used the HWU64 dataset which is a multi-
     </tr>
   </table>
 </div>
+
+### Training and Evaluation
+For training, we used BERT(Bidirectional Encoder Representation for Transformers) large model. BERT is a pre-trained language model that can understand the context of words in a sentence by considering the words that come before and after each word. This bidirectional approach allows BERT to capture complex language patterns and meanings, making it highly effective for a wide range of NLP tasks, such as text classification, sentiment analysis, question answering, and more. For our use case, we added a linear classification layer on top of the [CLS] token. We trained in 3 different setups and we selected a validation set to avoid issues with unstable hyperparameter tunning and focus on assessing the quality of the generated data. We will discuss more about the setup in the next part.
+
+**1. Training on Entire Dataset:** 
+
+**2. Full few shot setup:** 
+
+**3. Full few shot and augmented setup:** 
 
 
