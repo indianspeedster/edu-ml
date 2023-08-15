@@ -1,5 +1,5 @@
 MARKDOWN_FOLDER = markdown
-NOTEBOOK_FOLDER = notebook_final
+NOTEBOOK_FOLDER = notebooks
 
 MARKDOWN_FILES = $(wildcard $(MARKDOWN_FOLDER)/*.md)
 NOTEBOOK_FILES = $(patsubst $(MARKDOWN_FOLDER)/%.md, $(NOTEBOOK_FOLDER)/%.ipynb, $(MARKDOWN_FILES))
