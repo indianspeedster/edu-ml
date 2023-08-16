@@ -1,5 +1,17 @@
 ::: {.cell .markdown}
 ## Tokenization
+
+Tokenization is a fundamental process in natural language processing that plays an important role in results that any of the language model produces. All the major language models have their specific tokenizer. Since the author of the paper used Bert Large Uncased so for our reproducibility process by default we have only one choice of tokenizer. Below are some of the specific task that Bert Large tokenizer will perform:
+
+- Text Segmentation
+
+- Vocabulary Mapping
+
+- Subword Tokenization
+
+- Special Tokens 
+
+In the next section of this notebook we will be implementing the tokenization step.
 :::
 
 ::: {.cell .markdown}
@@ -121,7 +133,13 @@ train_data_full = train_data_full.map(tokenize_data)
 :::
 
 ::: {.cell .markdown}
-### Setting up Training arguments
+## Setting up Training arguments
+
+All the steps that we have been performing till now, we are making sure that it follows the exact same as mentioned by the author, The next important step in the process is to set up the model training arguments, different arguments may produce different results so it's important to make sure that the implementation is same as what author did. also in the last notebook we had to make assumption on using the specific optimizer, here we will be using that optimizer and see that how it effects the final result.
+
+:::
+
+::: {.cell .markdown}
 
 #### Training Arguments Explanation
 
@@ -216,4 +234,24 @@ This notebook will generate 6 files as mentioned below :
 -   train_dataset_full_tokenized.pkl
 
 -   function_train_args.pkl
+:::
+
+::: {.cell .markdown}
+## Next Steps:
+
+Now we have completed all the steps needed before training a model, The next step is Training the model and obtaining the final result. But wait, the author talked in the paper in Training and evaluation section that they did hyperparameter tuning but they never mentioned that they did it on all three models or just the largest model. Again why this doubt comes because if they are comparing then are they comparing it on the same ground or the models specific performance ?
+
+So again now we are left with two choices
+
+- Hyperparameter tuning on the largest model
+
+- Hyperparameter tuining on all three models
+
+It's upto you that what you are picking, below we have two notebook each with a different choice. Pick your own adventure and see how similar are your results.
+
+-   [Notebook(Hyperparameter tuning on the largest model)](/)
+
+-   [Notebook(Hyperparameter tuining on all three models)](/)
+
+
 :::
