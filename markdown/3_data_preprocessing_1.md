@@ -1,4 +1,21 @@
 ::: {.cell .markdown}
+# Data Preprocessing
+
+From the last Notebook we obtained train.csv and test.csv file, these files contains raw data and the data preprocessing step will act as a bridge between raw data and the final result which we are focused to achieve. Data preprocessing can have a major impact on the final results so it's crucial to thoroughly understand what the authors did and how you could follow the same strategy.
+
+From our understanding of the paper, The author did these three major steps:
+
+- Encoding the labels: A machine learning model always needs a number as input instead of raw text data, so label encoding is a crucial step here.
+
+- Sampling for full few shot Learning : The full few shot setup requires 10 samples for each label, so the author randomly took 10 samples from the dataset. it's important to make sure that you are picking unique samples. Since the author is experimenting on a 3 fold data so we will pick 30 samples and make 3 fold dataset with 10 samples each.
+
+- Data Augmentation : The next step which author followed was implementing the data augmentation strategy and then apply the same of the previously selected 10 samples for each intent. Again the augmentation will be applied on 3 fold dataset.
+
+Once we are done with the above three steps we will store the data and make it available for use in the next part of Reproducibility.
+
+:::
+
+::: {.cell .markdown}
 ### Importing relevent libraries
 :::
 
@@ -45,6 +62,7 @@ train_data = train_data.drop("Unnamed: 0", axis=1)
 
 ::: {.cell .markdown}
 ### Split the training data to train and validation
+we are again spliting the data into train and validation as when we train our model the best model while training will be selected on the basis of the validation data accuracy. ie(The model will be considered as the best model on a specific epoch when that epoch has the highest validation accuraccy.)
 :::
 
 ::: {.cell .code}
@@ -125,7 +143,6 @@ with open('train_data_full.pkl', 'wb') as file:
 ::: {.cell .markdown}
 ### Data Augmentation
 
-Upper and lower bound of n and alpha = 0.5 & 0.75
 :::
 
 ::: {.cell .code }
@@ -141,7 +158,7 @@ stop_words = set(stopwords.words('english'))
 
 ::: {.cell .code }
 ``` python
-def augmentation(sentence, alpha=0.5 ):
+def augmentation(sentence, alpha=0.75 ):
   sentence = sentence.split(" ")
   word_index = [i for i in range(len(sentence)) if sentence[i].lower() not in stop_words]
   n = int(alpha*len(word_index))
@@ -187,7 +204,7 @@ with open('augmented_datasets.pkl', 'wb') as file:
 :::
 
 ::: {.cell .markdown}
-# Output of this Notebook
+## Output of this Notebook
 
 This notebook will generate 4 files as mentioned below :
 
@@ -198,4 +215,24 @@ This notebook will generate 4 files as mentioned below :
 -   test_data.pkl
 
 -   augmented_datasets.pkl
+:::
+
+::: {.cell .markdown}
+During our data preprocessing step we made sure the three things cleaning, transforming, and organizing data before it's fed into a model. It's important to follow the exact same preprocessing pipeline to ensure that the data is consistent and prepared in the same way as in the original study. If we have made a wrong assumption then it would lead to a different outcome and inaccurate results.
+
+***
+:::
+
+::: {.cell .markdown}
+## Next steps
+
+Now we are done with the initial preprocessing of data and we are left with other preprocessing which is model specific so there is a seperate ntebook for the same. In the next notebook we will focus on tokenization and setting up training arguments.
+
+When we see the paper, the paper talked about the hyperparameters such as epochs and batch size but for rest they said they used standard hyperparameters for Bert Large models. But when we researched we found that there is no specific optimizer for BERT large models, it depends upon task. so for our Classification task we were left with two choices, Either use AdamW or SGD. So we have created two notebooks, The first notebook uses AdamW and the second notebook uses SGD. You can pick your own choice and see what are the results :
+
+-   [Notebook(Tokenization + Adamw as optimizer)](/)
+
+-   [Notebook(Tokenization + SGD as optimizer)](/)
+
+***
 :::
