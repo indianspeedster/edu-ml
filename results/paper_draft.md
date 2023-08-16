@@ -64,6 +64,12 @@ For training, we used BERT(Bidirectional Encoder Representation for Transformers
 
 ## Results
 
+Our experiments on the above three setups provided us with the results mentioned in Table 1. 
+
+When we trained the Bert large uncased model using all the samples provided in the entire dataset, it performed really well, with an accuracy of 92.75%. This accuracy was not a surprise as BERT-large (Devlin et al., 2018) is a massive model with 340 million parameters. However, when we trained it with only a few examples for each intent (the full few-shot dataset), the accuracy dropped to 83%. Although it's difficult to say that 83% accuracy is good accuracy or bad accuracy considering that the model was trained on a classification problem on 64 labels.
+
+Adding more examples through our data augmentation strategy the accuracy moved up by a small percentage and the result was 84.5%. Even though there was some improvement but this improvement was not impactful as the results were not that close to the full dataset model.
+
 <div align="center">
   <table>
     <tr>
@@ -83,3 +89,25 @@ For training, we used BERT(Bidirectional Encoder Representation for Transformers
       <td>84.5</td>
     </tr>
   </table>
+  </div>
+
+## Discussion
+Our study's results have opened up an interesting discussion about why adding more examples through data augmentation didn't lead to a significant increase in accuracy. Let's explore some possible reasons.
+
+One key factor is how we changed the words in our augmentation technique. We used synonyms to make new examples, but these changes might not have been big enough to make the model understand better. Using more advanced methods to change sentences, like rephrasing them in different ways, might lead to more noticeable improvements.
+
+Another reason could be that intent classification is tricky, especially when we have very few examples. Even though we tried to help the model by adding more examples, the limited number of training instances might have made it hard for the model to understand all the different ways people express their intentions.
+
+Also, the dataset we used is quite diverse, covering lots of different topics and situations. This diversity might have made it tough for our augmentation strategy to create truly meaningful variations for each intent.
+
+To sum up, our study gives us valuable hints about how complex intent classification can be. While data augmentation is promising, it might not work perfectly in all cases. Exploring more advanced augmentation methods and larger datasets could help us get better results in the future.
+
+## References
+
+[1] Sahu, G., Rodriguez, P., Laradji, I. H., Atighehchian, P., Vazquez, D., & Bahdanau, D. (2019). Data Augmentation for Intent Classification with Off-the-shelf Large Language Models. Service now research.
+
+[2] Liu, X., Eshghi, A., Swietojanski, P., & Rieser, V. (2019). Benchmarking Natural Language Understanding Services for building Conversational Agents. Springer.
+
+[3] Wei, J., & Zou, K. (2019). EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks.
+
+[4] Devlin, J., Chang, M. W., & Lee, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.Google AI
