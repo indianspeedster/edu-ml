@@ -24,8 +24,6 @@ This made sure that only a specific ratio of the total words are getting replace
 
 ## Datasets:
 
-## Datasets:
-
 For our intent classification model, we used the HWU64 dataset which is a multi-domain dataset each covering a wide range of typical task-oriented chatbot domains, such as setting up a calendar, adding remainder or alarm, etc. In the table below we have described the data and how exactly we have used the data to train test and validate our model.
 <div align="center">
   <table>
