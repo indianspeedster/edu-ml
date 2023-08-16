@@ -72,6 +72,14 @@ test.to_csv("test.csv")
 ```
 :::
 
+::: {.cell .markdown}
+The above cell will produce two csv files as output.
+
+-   train.csv
+
+-   test.csv
+:::
+
 
 ::: {.cell .markdown}
 Once we have the data ready, then we can now focus on Augmenting the data.
