@@ -19,7 +19,10 @@ We decided to train an Intent classifier, where the intent is a type of request 
 One of the important tasks in the process was to decide on an augmentation strategy, Augmentation can be not that difficult when it is done on Image data but when it comes to language data, augmentation can be a daunting task where you have to make sure that the context in the language remains the same.
 In our case, we followed **Synonym Replacement**, The idea was to replace the words in the speech text with their synonyms but the issue was if we replace all the words with their synonyms then there are high chances that the context won't remain the same. so to avoid this we came up with the idea of randomly choosing n words from the sentence that are not stop words and replacing each of these words with one of its synonyms chosen at random.
 But the next issue was that long sentences have more words than short ones, they can absorb more noise while maintaining their original class label. To counter this we went ahead and followed a synonym replacement approach mentioned in [].The approach focuses on making n directly proportional to the length of the word and calculating n with the help of a constant "α" and the size of the sentence l. This led us to the formulae n = α * l and the value of "α" lies between 0 and 1.
+But the next issue was that long sentences have more words than short ones, they can absorb more noise while maintaining their original class label. To counter this we went ahead and followed a synonym replacement approach mentioned in [].The approach focuses on making n directly proportional to the length of the word and calculating n with the help of a constant "α" and the size of the sentence l. This led us to the formulae n = α * l and the value of "α" lies between 0 and 1.
 This made sure that only a specific ratio of the total words are getting replaced and hence led to high chances of overall context being maintained.
+
+## Datasets:
 
 ## Datasets:
 
@@ -64,3 +67,52 @@ For training, we used BERT(Bidirectional Encoder Representation for Transformers
 
 **3. Full few shot and augmented setup:** In this configuration we picked the same 30 samples and with the help of the data augmentation strategy described above we added 30 more data and now the total sample count is 60. Then we divided the 60 samples of 64 intent into 20 samples each and made three fold dataset. Next again we took the same Bert Large uncased model to train this dataset.
 
+## Results
+
+Our experiments on the above three setups provided us with the results mentioned in Table 1. 
+
+When we trained the Bert large uncased model using all the samples provided in the entire dataset, it performed really well, with an accuracy of 92.75%. This accuracy was not a surprise as BERT-large (Devlin et al., 2018) is a massive model with 340 million parameters. However, when we trained it with only a few examples for each intent (the full few-shot dataset), the accuracy dropped to 83%. Although it's difficult to say that 83% accuracy is good accuracy or bad accuracy considering that the model was trained on a classification problem on 64 labels.
+
+Adding more examples through our data augmentation strategy the accuracy moved up by a small percentage and the result was 84.5%. Even though there was some improvement but this improvement was not impactful as the results were not that close to the full dataset model.
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Model</th>
+      <th>Accuracy</th>
+    </tr>
+    <tr>
+      <td>Full dataset</td>
+      <td>92.75</td>
+    </tr>
+    <tr>
+      <td>Full few-shot dataset</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td>Full few-shot dataset + Augmented dataset</td>
+      <td>84.5</td>
+    </tr>
+  </table>
+  </div>
+
+## Discussion
+Our study's results have opened up an interesting discussion about why adding more examples through data augmentation didn't lead to a significant increase in accuracy. Let's explore some possible reasons.
+
+One key factor is how we changed the words in our augmentation technique. We used synonyms to make new examples, but these changes might not have been big enough to make the model understand better. Using more advanced methods to change sentences, like rephrasing them in different ways, might lead to more noticeable improvements.
+
+Another reason could be that intent classification is tricky, especially when we have very few examples. Even though we tried to help the model by adding more examples, the limited number of training instances might have made it hard for the model to understand all the different ways people express their intentions.
+
+Also, the dataset we used is quite diverse, covering lots of different topics and situations. This diversity might have made it tough for our augmentation strategy to create truly meaningful variations for each intent.
+
+To sum up, our study gives us valuable hints about how complex intent classification can be. While data augmentation is promising, it might not work perfectly in all cases. Exploring more advanced augmentation methods and larger datasets could help us get better results in the future.
+
+## References
+
+[1] Sahu, G., Rodriguez, P., Laradji, I. H., Atighehchian, P., Vazquez, D., & Bahdanau, D. (2019). Data Augmentation for Intent Classification with Off-the-shelf Large Language Models. Service now research.
+
+[2] Liu, X., Eshghi, A., Swietojanski, P., & Rieser, V. (2019). Benchmarking Natural Language Understanding Services for building Conversational Agents. Springer.
+
+[3] Wei, J., & Zou, K. (2019). EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks.
+
+[4] Devlin, J., Chang, M. W., & Lee, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.Google AI
