@@ -1,5 +1,22 @@
 ::: {.cell .markdown}
 ## Model training
+
+Here we are at the Stage where we are ready with the data and in the stage where we have to train the model but before that we need to make some modification to the Bert Large model as mentioned in the training and evaluation section in the paper. Bert large uncased model can be finetuned for specific tasks and in our case we are trying to implement a classification model with 64 classes.
+
+The code in the notebook will be performing the following steps:
+
+- Load the dataset
+
+- Load BERT Large uncased model from Huggingface's transformer library
+
+- Modify the architecture of the model
+
+- set up the metrics for evaluating the model
+
+- Train the model with three different datasets
+
+This notebook uses hyper parameter tuning for all three models and the results produced may have different hyperparameter for all three models.
+
 :::
 
 ::: {.cell .code}
@@ -18,6 +35,7 @@ import torch
 import torch.nn as nn
 from transformers.modeling_outputs import SequenceClassifierOutput
 from transformers import AdamW
+import torch.optim as optim 
 ```
 :::
 

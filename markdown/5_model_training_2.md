@@ -1,5 +1,22 @@
 ::: {.cell .markdown}
 ## Model training
+
+Here we are at the Stage where we are ready with the data and in the stage where we have to train the model but before that we need to make some modification to the Bert Large model as mentioned in the training and evaluation section in the paper. Bert large uncased model can be finetuned for specific tasks and in our case we are trying to implement a classification model with 64 classes.
+
+The code in the notebook will be performing the following steps:
+
+- Load the dataset
+
+- Load BERT Large uncased model from Huggingface's transformer library
+
+- Modify the architecture of the model
+
+- set up the metrics for evaluating the model
+
+- Train the model with three different datasets
+
+This notebook uses hyper parameter tuning for largest models and the results produced will be having same hyperparameter for all three models.
+
 :::
 
 ::: {.cell .code}
@@ -211,4 +228,15 @@ for train_data in train_dataset_augmented:
           best_accuracy = max(accuracy, best_accuracy)
 print(f"Best Accuracy:{best_accuracy}")
 ```
+:::
+
+::: {.cell .markdown}
+## Results
+
+Here we are in the section where we have the results.
+Time for you to match the results with what is mentioned in the paper and see that where your choices had led you ?
+were you lucky enough to get the exact same result ?
+
+If your results were different, How close you were to the original result ? 
+
 :::
