@@ -12,19 +12,33 @@ Before moving ahead let's understand some of the terminologies which will be oft
 
 :::
 
-::: {.cell .markdown}
-### Intent classification
-Intent classification is like teaching a computer to understand what someone wants. Imagine you're chatting with a virtual assistant, and you say, "Set an alarm for 7 AM." Intent classification helps the computer figure out that your intention is to set an alarm. It's about training the computer to recognize different purposes or intentions behind what people say. This skill is essential for making chatbots and voice assistants work better. By learning from lots of examples, the computer becomes good at identifying different intentions, making conversations with machines more helpful and natural.
-:::
-
-::: {.cell .markdown}
-### Full few shot learning
-Full few-shot learning improves models' abilities with less data. Unlike standard few-shot learning that uses a few examples per task, full few-shot learning gets more examples for each task. This helps models understand tasks better and work well with limited data. It's like learning from a complete picture instead of just a small part. This approach makes models smarter across different tasks, from recognizing pictures to understanding language. By learning from a broader perspective, full few-shot learning solves the problem of having not much data and helps AI do a great job even with a small amount of information.
-:::
 
 ::: {.cell .markdown}
 ## Claims of the paper:
-The above paper claims that "There is a minor improvement while training full few-shot learning models with data augmentation." Further we will try to reproduce the paper and see if the claim is valid or not ?
+The above paper claims that "There is a minor improvement while training full few-shot learning models with data augmentation." To justify the claim the paper has this table in the result section.
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Model</th>
+      <th>Accuracy</th>
+    </tr>
+    <tr>
+      <td>Full dataset</td>
+      <td>92.75</td>
+    </tr>
+    <tr>
+      <td>Full few-shot dataset</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td>Full few-shot dataset + Augmented dataset</td>
+      <td>84.5</td>
+    </tr>
+  </table>
+  </div>
+
+Further we will follow the methodology given in the paper and reproduce the results to validate the claims made in the paper.
 
 :::
 
@@ -32,7 +46,7 @@ The above paper claims that "There is a minor improvement while training full fe
 ::: {.cell .markdown}
 ## Requirements
 
-Below are some of the libraries that are mandatory to install.
+Before going ahead we need to install some of the libraries which we are going to use during the course of reproducing the results of this paper.
 
 -   [transformers](https://pypi.org/project/transformers/)
 
@@ -56,20 +70,46 @@ Below are some of the libraries that are mandatory to install.
 
 ::: {.cell .markdown}
 ### Datasets
-
 As mentioned by the author that they used [HWU64](https://github.com/xliuhw/NLU-Evaluation-Data/) dataset and the sourcw of the data is [this](https://github.com/xliuhw/NLU-Evaluation-Data/) official Github repository and it contains natural language data for human-robot interaction in home domain which was collected and annotated for evaluating NLU Services/platforms.
 
-The above github link contains
+The above github repository contains:
+
+**Collected-Original-Data (25K)**: collected original data with normalization for numbers/date etc which contain the pre-designed human-robot interaction questions and the user answers. They are organized in CSV format.
+
+**AnnotatedData (25716 Lines)**: This contains annotated data for Intents and Entities, organized in csv format.
+The annotated csv file has following columns: userid, answerid, scenario, intent, status, answer_annotation, notes, suggested_entities, answer_normalised, answer, question.
+Most of them come from the original data collection, we keep them here for monitoring of the afterwards processing.
+
+"answer" contains the original user answers.
+
+"answer_normalised" were normalised from "answer".
+
+"notes" was used for the annotators to keep a track of changes they have made.
+
+"status" was used for annotation and post processing.
+
+"answer_annotation" contains the annotated results which is used for generating the train/test datasets, along with "scenario", "intent" and "status".
+
+**10-fold cross-validation** : This is 10 fold cross validation data which is formed from the AnnotatedData. This dataset was specifically designed by the authors for their specific purpose.
+
+**Annotation Guidelines** : It contains annotation guidelines which were used to annotate the data.
+
+So when we see the above folders, we are left with 3 different data folders, 3 because Annotation Guidelines does not cantains any data for intent classification.
+
+When we check the content of the remaining three folders, we will see that Annotated data and 10 fold cross validation data is the same data, it's just that the 10 fold data contains 10 fold of the Annotated data. Here our intuition will say to go with one of the 10 fold data, the reason why we should choose the 10 fold data instead of the entire annotated dataset because the 1 fold data of the 10 fold data contains the same amount of data as mentioned in the paper. 
+
+Now we are left with 2 options
 
 -   [Collected-Original-Data](https://github.com/xliuhw/NLU-Evaluation-Data/tree/master/Collected-Original-Data)
 
 -   [CrossValidation-Data](https://github.com/xliuhw/NLU-Evaluation-Data/tree/master/CrossValidation/autoGeneFromRealAnno/autoGene_2018_03_22-13_01_25_169/CrossValidation)
 
-In the paper it's given that the author used a given number of training and test data but you are not sure that from which of the above data they obtained that number.
+From the above 2 options it's dificult to pick one choice, so we will leave it upon the you to pick one and go ahead.
 
 Below we have 2 notebooks that have code to load data from any of all two datafolder and you can give a try to both and see through which data we are able to get equivalent results to what the author mentioned.
 
 -   [Notebook(Collected-Original-Data)](/)
 
 -   [Notebook(CrossValidation-Data)](/)
+
 :::

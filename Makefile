@@ -1,5 +1,5 @@
-MARKDOWN_FOLDER = markdown_md\data_preprocessing
-NOTEBOOK_FOLDER = notebook_md
+MARKDOWN_FOLDER = markdown/data_preprocessing
+NOTEBOOK_FOLDER = notebooks
 
 MARKDOWN_FILES = $(wildcard $(MARKDOWN_FOLDER)/*.md)
 NOTEBOOK_FILES = $(patsubst $(MARKDOWN_FOLDER)/%.md, $(NOTEBOOK_FOLDER)/%.ipynb, $(MARKDOWN_FILES))
