@@ -1,8 +1,29 @@
 ::: {.cell .markdown}
-## Getting Data
-In the world of machine learning, the data you use is like the building blocks of your model. Good data can help your model perform really well and give useful results, while not-so-good data can lead to results that don't really make sense or aren't very accurate. So, having good, reliable data is super important because it's what your model learns from and it can make a big difference in how well your model works and the results it gives you.
+## Dataset
 
-Likewise, when it comes to **reproducing** any kind of result, the role of data is incredibly crucial. If you're not using the exact same data as the original study, it becomes quite challenging to achieve precisely the same outcome. Data forms the foundation for outcomes, and even small differences in the data used can lead to variations in results. Therefore, the accuracy and similarity of data used for reproduction play a vital role in ensuring the consistency and reliability of the outcomes.
+If you are on this notebook then you have made a choice in the previous section to go ahead with **CrossValidation-Data**.
+Let's understand in more depth what is inside this dataset directory.
+
+The CrossValidation-Data directory contains these 4 folder:
+
+
+- autoGeneFromRealAnno/autoGene_2018_03_22-13_01_25_169/CrossValidation
+
+- out4ApiaiReal/Apiai_trainset_2018_03_22-13_01_25_169/CrossValidation
+
+- out4LuisReal/Luis_trainset_2018_03_22-13_01_25_169/CrossValidation
+
+- out4RasaReal/rasa_json_2018_03_22-13_01_25_169_80Train/CrossValidation
+
+- out4WatsonReal/Watson_2018_03_22-13_01_25_169_trainset/CrossValidation
+
+
+The first directory (autoGeneFromRealAnno/:) contains generated trainset and testset from the annotated csv file. The other four subdirectories (out4ApiaiReal, out4LuisReal, out4RasaReal and out4WatsonReal) in CrossValidation/ are the converted NLU service input data for Dialogflow, LUIS, Rasa and Watson respectively. So we will only be picking the first directory for our use case.
+
+Inside the directory "autoGeneFromRealAnno" we have 10 fold data among which we wcan choose any of the fold to train but for now we can go ahead with 1st fold. Inside First fold we have train and test directory respectively and inside the repositories we have 64 csv files which contains intent data for each of the 64 intent.
+
+Next we will try to collect the data and store it in a pandas dataframe and then a csv file.
+
 
 ***
 :::
@@ -86,18 +107,4 @@ The above cell will produce two csv files as output.
 ***
 :::
 
-::: {.cell .markdown}
-Once we have the data ready, then we can now focus on Augmenting the data.
-
-As discussed in the paper, the Authors are following synonym replacement strategy with a special formulae n = α * l where n is the number of words that is going to be replaced, α is a constant whose value lies between 0 and 1 and l is the length of the sentence.
-
-Now when calculating n, there is high probability that the value will be a decimal value and since n can be only an integer, the author never specified that which value of n we are supposed to pick. ie (ceil or floor). Intent classification task has less number of words as input and even if there is difference of one word in the the augmented text due to this ceil, floor confusion, then it may lead to different results.
-
-For the data preprocessing we have two notebooks which will focus on both the scenarios taking a ceil value for n and taking a floor value for n.
-
--   [Notebook(DataPreProcess_floor(n))](/)
-
--   [Notebook(DataPreProcess_ceil(n))](/)
-
-:::
 

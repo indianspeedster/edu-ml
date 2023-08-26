@@ -70,6 +70,9 @@ Before going ahead we need to install some of the libraries which we are going t
 
 ::: {.cell .markdown}
 ### Datasets
+
+When it comes to **reproducing** any kind of result, the role of data is incredibly crucial. If you're not using the exact same data as the original study, it becomes quite challenging to achieve precisely the same outcome. Data forms the foundation for outcomes, and even small differences in the data used can lead to variations in results. Therefore, the accuracy and similarity of data used for reproduction play a vital role in ensuring the consistency and reliability of the outcomes.
+
 As mentioned by the author that they used [HWU64](https://github.com/xliuhw/NLU-Evaluation-Data/) dataset and the sourcw of the data is [this](https://github.com/xliuhw/NLU-Evaluation-Data/) official Github repository and it contains natural language data for human-robot interaction in home domain which was collected and annotated for evaluating NLU Services/platforms.
 
 The above github repository contains:
@@ -100,11 +103,21 @@ When we check the content of the remaining three folders, we will see that Annot
 
 Now we are left with 2 options
 
+1. Collected original data: 
+
 -   [Collected-Original-Data](https://github.com/xliuhw/NLU-Evaluation-Data/tree/master/Collected-Original-Data)
 
 -   [CrossValidation-Data](https://github.com/xliuhw/NLU-Evaluation-Data/tree/master/CrossValidation/autoGeneFromRealAnno/autoGene_2018_03_22-13_01_25_169/CrossValidation)
 
-From the above 2 options it's dificult to pick one choice, so we will leave it upon the you to pick one and go ahead.
+Now let's understand what is the difference between Annotated data and Original data through an example.
+
+Original data: Is there an alarm for 10am?
+
+Annotated data: "is there an alarm for ten am"
+
+So from the above two examples we can see that in the annotated data all the text is converted to lower case. but we know that the author is using Bert Large Uncased model and The BERT "uncased" models are designed to be case-insensitive. So it's difficult to say that how much effect each of the data will bring.
+
+From the above 2 options it's dificult to pick one choice, so we will leave it upon you to pick one and go ahead.
 
 Below we have 2 notebooks that have code to load data from any of all two datafolder and you can give a try to both and see through which data we are able to get equivalent results to what the author mentioned.
 
