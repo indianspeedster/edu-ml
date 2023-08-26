@@ -2,6 +2,7 @@
 Once we have the data ready, then we can now focus on Augmenting the data.
 
 As discussed in the paper, the Authors are following synonym replacement strategy with a special formulae n = α * l where n is the number of words that is going to be replaced, α is a constant whose value lies between 0 and 1 and l is the length of the sentence.
+
 :::
 
 ::: {.cell .markdown}
