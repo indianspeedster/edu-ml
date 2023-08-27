@@ -1,13 +1,4 @@
-SOURCES := $(wildcard *.md)
-
-NBS := $(patsubst %.md,%.ipynb,$(SOURCES))
-
-%.ipynb: %.md
-	pandoc  --self-contained --wrap=none  -i notebooks/title.md $^ -o $@
-
 all: clean intro dataset dataprep args train start_here
-
-notebooks: $(NBS)
 
 dataprep:
 	pandoc --resource-path=markdown/ --embed-resources --standalone --wrap=none -i markdown/data_preprocessing/3_data_preprocessing_1.md \
