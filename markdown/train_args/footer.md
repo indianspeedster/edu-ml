@@ -11,9 +11,9 @@ So again now we are left with two choices
 
 It's upto you that what you are picking, below we have two notebook each with a different choice. Pick your own adventure and see how similar are your results.
 
--   [Notebook(Hyperparameter tuning on the largest model)](/)
+-   [Notebook(Hyperparameter tuning on the largest model)](/5_model_training_1.ipynb)
 
--   [Notebook(Hyperparameter tuining on all three models)](/)
+-   [Notebook(Hyperparameter tuining on all three models)](/5_model_training_2.ipynb)
 
 
 :::

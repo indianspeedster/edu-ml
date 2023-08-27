@@ -51,8 +51,8 @@ From the above 2 options it's dificult to pick one choice, so we will leave it u
 
 Below we have 2 notebooks that have code to load data from any of all two datafolder and you can give a try to both and see through which data we are able to get equivalent results to what the author mentioned.
 
--   [Notebook(Collected-Original-Data)](/)
+-   [Notebook(Collected-Original-Data)](/2_dataset_2)
 
--   [Notebook(CrossValidation-Data)](/)
+-   [Notebook(CrossValidation-Data)](/2_dataset_1)
 
 :::

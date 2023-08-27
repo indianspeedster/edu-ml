@@ -12,9 +12,9 @@ When we see the paper, the paper talked about the hyperparameters such as epochs
 
  Considering the above mentioned 2 choices we have created two notebooks, The first notebook uses AdamW and the second notebook uses SGD. You can pick your own choice and see what are the results :
 
--   [Notebook(Tokenization + Adamw as optimizer)](/)
+-   [Notebook(Tokenization + Adamw as optimizer)](/4_train_args_1.ipynb)
 
--   [Notebook(Tokenization + SGD as optimizer)](/)
+-   [Notebook(Tokenization + SGD as optimizer)](/4_train_args_2.ipynb)
 
 ***
 :::
