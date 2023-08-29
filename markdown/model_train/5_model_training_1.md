@@ -60,13 +60,13 @@ with open('train_dataset_full_tokenized.pkl', 'rb') as file:
 with open('augmented_train_dataset_tokenized.pkl', 'rb') as file:
     train_dataset_augmented = pickle.load(file)
 
-with open('function_pickle.pkl', 'rb') as f:
-    create_training_arguments_and_optimizer = pickle.load(f)
+with open('args.json', 'r') as file:
+    args_dict = json.load(file)
 ```
 :::
 
 ::: {.cell .markdown}
-### Setting up the training arguments
+### Setting up standard learning rates and tokenizer
 :::
 
 ::: {.cell .code}
@@ -75,6 +75,31 @@ learning_rates = [5e-5, 4e-5, 3e-5, 2e-5]
 
 pre_trained_BERTmodel='bert-large-uncased'
 BERT_tokenizer=AutoTokenizer.from_pretrained(pre_trained_BERTmodel)
+```
+:::
+
+::: {.cell .markdown}
+### Training Argument function
+:::
+
+::: {.cell .code}
+``` python
+def create_training_arguments(args_dict, lr):
+    training_args = TrainingArguments(
+        output_dir=args_dict["output_dir"],
+        evaluation_strategy=args_dict["evaluation_strategy"],
+        save_strategy=args_dict["save_strategy"],
+        learning_rate= lr,
+        per_device_train_batch_size=args_dict["per_device_train_batch_size"],
+        per_device_eval_batch_size=args_dict["per_device_eval_batch_size"],
+        num_train_epochs=args_dict["num_train_epochs"],
+        warmup_ratio=args_dict["warmup_ratio"],
+        weight_decay=args_dict["weight_decay"],
+        load_best_model_at_end=args_dict["load_best_model_at_end"],
+        metric_for_best_model=args_dict["metric_for_best_model"],
+        save_total_limit=args_dict["save_total_limit"],
+    )
+    return training_args
 ```
 :::
 
@@ -123,9 +148,8 @@ class BertModelWithCustomLossFunction(nn.Module):
 
 ::: {.cell .code}
 ``` python
-def train_model(train_data, args, val_dataset, test_dataset):
+def train_model(train_data, args, val_dataset, test_dataset, lr):
     BERT_model = BertModelWithCustomLossFunction()
-    optimizer = AdamW(BERT_model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay)
     trainer = Trainer(
         model=BERT_model,
         args=args,
@@ -133,8 +157,9 @@ def train_model(train_data, args, val_dataset, test_dataset):
         eval_dataset=val_dataset,
         tokenizer=BERT_tokenizer,
         compute_metrics=compute_metrics,
-        optimizers=(optimizer,),
     )
+    if args_dict["optimizer"] == "sgd":
+      trainer.optimizer = SGD(BERT_model.parameters(), lr=lr , momentum=0.9)
     trainer.train()
     evaluation_metrics = trainer.predict(test_dataset)
     accuracy = evaluation_metrics.metrics['test_accuracy']
@@ -185,12 +210,12 @@ for train_data in train_dataset_full:
     best_accuracy = 0
     best_lr = learning_rates[0]
     for lr in learning_rates:
-        args = create_training_arguments(lr)
+        args = create_training_arguments(args_dict, lr)
         accuracy = train_model(train_data, args, val_dataset, test_dataset)
         if accuracy>best_accuracy:
           best_lr = lr
           best_accuracy = max(accuracy, best_accuracy)
-print(f"Best Accuracy:{best_accuracy}\n Best Learning Rate: {best_lr}")
+    print(f"Best Accuracy:{best_accuracy}\n Best Learning Rate: {best_lr}")
 ```
 :::
 
@@ -204,12 +229,12 @@ for train_data in train_dataset:
     best_accuracy = 0
     best_lr = learning_rates[0]
     for lr in learning_rates:
-        args, optimizer = create_training_arguments(lr)
-        accuracy = train_model(train_data, args, val_dataset, test_dataset)
+        args = create_training_arguments(args_dict, lr)
+        accuracy = train_model(train_data, args, val_dataset, test_dataset, lr)
         if accuracy>best_accuracy:
           best_lr = lr
           best_accuracy = max(accuracy, best_accuracy)
-print(f"Best Accuracy:{best_accuracy}\n Best Learning Rate: {best_lr}")
+    print(f"Best Accuracy:{best_accuracy}\n Best Learning Rate: {best_lr}")
 ```
 :::
 
@@ -223,11 +248,11 @@ for train_data in train_dataset_augmented:
     best_accuracy = 0
     best_lr = learning_rates[0]
     for lr in learning_rates:
-        args = create_training_arguments(lr)
-        accuracy = train_model(train_data, args, val_dataset, test_dataset)
+        args = create_training_arguments(args_dict, lr)
+        accuracy = train_model(train_data, args, val_dataset, test_dataset, lr)
         if accuracy>best_accuracy:
           best_lr = lr
           best_accuracy = max(accuracy, best_accuracy)
-print(f"Best Accuracy:{best_accuracy}\n Best Learning Rate: {best_lr}")
+    print(f"Best Accuracy:{best_accuracy}\n Best Learning Rate: {best_lr}")
 ```
 :::

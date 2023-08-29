@@ -188,20 +188,9 @@ for i in range(3):
 ```
 :::
 
-::: {.cell .markdown}
-### Store data
-:::
-
 ::: {.cell .code}
 ``` python
-with open('training_datasets.pkl', 'wb') as file:
-    pickle.dump(training_datasets, file)
-with open('val_data.pkl', 'wb') as file:
-    pickle.dump(val_data, file)
-with open('test_data.pkl', 'wb') as file:
-    pickle.dump(test_data, file)
-with open('train_data_full.pkl', 'wb') as file:
-    pickle.dump(train_data, file)
+train_data_full = train_data
 ```
 :::
 
