@@ -35,7 +35,8 @@ import torch
 import torch.nn as nn
 from transformers.modeling_outputs import SequenceClassifierOutput
 from transformers import AdamW
-import torch.optim as optim 
+from torch.optim import SGD
+import json
 ```
 :::
 
@@ -211,7 +212,7 @@ for train_data in train_dataset_full:
     best_lr = learning_rates[0]
     for lr in learning_rates:
         args = create_training_arguments(args_dict, lr)
-        accuracy = train_model(train_data, args, val_dataset, test_dataset)
+        accuracy = train_model(train_data, args, val_dataset, test_dataset, lr)
         if accuracy>best_accuracy:
           best_lr = lr
           best_accuracy = max(accuracy, best_accuracy)

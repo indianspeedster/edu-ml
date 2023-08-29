@@ -1,4 +1,4 @@
-all: clean intro dataset dataprep args train start_here
+all: intro dataset dataprep args train start_here
 
 dataprep:
 	pandoc --resource-path=markdown/ --embed-resources --standalone --wrap=none -i markdown/data_preprocessing/3_data_preprocessing_1.md \
