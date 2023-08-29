@@ -5,12 +5,12 @@ This research paper uses a powerful technique called full few-shot learning to e
 ## Introduction:
 A significant challenge in building an intent classifier is the collection and labeling of training data. It requires a considerable amount of manpower and surveys to gather data and label how people communicate with conversational agents for a specific task. In today's era, one of the robust techniques for solving the issue of data scarcity is data augmentation, which has proven to be powerful in tasks involving vision and speech data. However, when dealing with language data, things become different as devising universal data augmentation techniques becomes highly challenging.
 
-Despite data augmentation for language data being a demanding task, researchers have developed various techniques to augment natural language data, which have shown some degree of success. In a well-known study [], the concept of translating data into a different language and then back-translating it to the original language was proposed. Another study focused on the idea of fine-tuning large language models for rephrasing the data. Although these studies have demonstrated success in certain tasks, implementing them can be costly for specific purposes. A cost-effective approach to language data augmentation was published by [], representing the first comprehensive exploration of text editing techniques for this purpose. This work proposed 4 different ways to augment language data, (Synonym replacement, Random insertion, Random swap, Random deletion). We found the idea of synonym replacement to be a strong subject for our experiment. The reason was that in terms of communication with conversational agents, there is a high chance that different people use different words for the same intent due to which we expected that synonym replacement would help in our experiment.
+Despite data augmentation for language data being a demanding task, researchers have developed various techniques to augment natural language data, which have shown some degree of success. In a well-known study [2], the concept of translating data into a different language and then back-translating it to the original language was proposed. Another study focused on the idea of fine-tuning large language models for rephrasing the data. Although these studies have demonstrated success in certain tasks, implementing them can be costly for specific purposes. A cost-effective approach to language data augmentation was published by [], representing the first comprehensive exploration of text editing techniques for this purpose. This work proposed 4 different ways to augment language data, (Synonym replacement, Random insertion, Random swap, and Random deletion). We found the idea of synonym replacement to be a strong subject for our experiment. The reason was that in terms of communication with conversational agents, there is a high chance that different people use different words for the same intent due to which we expected that synonym replacement would help in our experiment.
 
 Our experiment primarily focus on full few shot Intent classification on HWU 64 dataset, We primarily focused on 3 scenarios about which we will be discussing further in the methodology section. 
 
 ## Methodology:
-We decided to train an Intent classifier, where the intent is a type of request that a conversational agent supports eg: the user can ask the agent to set an Alarm, play music, etc. To understand in-depth and compare results we considered training 3 different Intent classifiers.
+We decided to train an Intent classifier, where the intent is a type of request that a conversational agent supports e.g: the user can ask the agent to set an Alarm, play music, etc. To understand in-depth and compare results we considered training 3 different Intent classifiers.
 
 - Classifier built on Full data.
 - Classifier build on full few-shot data. 
@@ -107,10 +107,12 @@ To sum up, our study gives us valuable hints about how complex intent classifica
 
 ## References
 
-[1] Sahu, G., Rodriguez, P., Laradji, I. H., Atighehchian, P., Vazquez, D., & Bahdanau, D. (2019). Data Augmentation for Intent Classification with Off-the-shelf Large Language Models. Service now research.
+[1] Sahu, Gaurav, et al. "Data augmentation for intent classification with off-the-shelf large language models."
 
-[2] Liu, X., Eshghi, A., Swietojanski, P., & Rieser, V. (2019). Benchmarking Natural Language Understanding Services for building Conversational Agents. Springer.
+[2] Yu, Adams Wei, et al. "Qanet: Combining local convolution with global self-attention for reading comprehension."
 
-[3] Wei, J., & Zou, K. (2019). EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks.
+[3] Liu, Xingkun, et al. "Benchmarking natural language understanding services for building conversational agents."
 
-[4] Devlin, J., Chang, M. W., & Lee, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.Google AI
+[4] Wei, Jason, and Kai Zou. "Eda: Easy data augmentation techniques for boosting performance on text classification tasks."
+
+[5] Devlin, Jacob, et al. "Bert: Pre-training of deep bidirectional transformers for language understanding."
