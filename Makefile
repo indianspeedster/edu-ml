@@ -1,4 +1,4 @@
-all: intro dataset dataprep args train start_here
+all: clean intro dataset dataprep args train read_me
 
 dataprep:
 	pandoc --resource-path=markdown/ --embed-resources --standalone --wrap=none -i markdown/data_preprocessing/3_data_preprocessing_1.md \
@@ -35,8 +35,8 @@ train:
 	pandoc --resource-path=markdown/ --embed-resources --standalone --wrap=none -i markdown/model_train/5_model_training_2.md \
 	markdown/model_train/footer.md \
 		 -o notebooks/5_model_training_2.ipynb
-start_here:
-	pandoc --resource-path=/ --embed-resources --standalone --wrap=none -i start_here.md -o start_here.ipynb
+read_me:
+	pandoc --resource-path=/ --embed-resources --standalone --wrap=none -i README.md -o README.ipynb
 
 
 clean: 

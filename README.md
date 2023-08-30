@@ -1,17 +1,24 @@
-# Using Reproducibility in Machine Learning Education: Reproducibility with Incomplete Methodology Descriptions
+# Reproducibility with Incomplete Methodology Descriptions
 
-This work was done under [UCSC OSPO](https://ospo.ucsc.edu/) summer of reproducibility and is a part of the project **Reproducibility in machine learning Education** which aims to develop interactive educational materials about reproducibility in machine learning for use in graduate and undergraduate classes. 
+This work was done under [UCSC OSPO](https://ospo.ucsc.edu/) Summer of Reproducibility and is a part of the project **Reproducibility in machine learning Education** which aims to develop interactive educational materials about reproducibility in machine learning for use in graduate and undergraduate classes. 
 *** 
 
-This repository mainly Contains:
+> In machine learning research papers, sometimes the methodology description seems complete at first glance, but is actually missing some important details that are necessary in order to reproduce the result. This repository contains a fictitious machine learning research paper, and a sequence of accompanying Python notebooks to highlight various choices that can be made to fill in the gaps, and explore how these choices can impact the overall results of the research. 
+>
+> Our “research paper” is about the impact of data augmentation on few-shot learning for intent classification. We implemented a basic data augmentation strategy with synonym replacement using the HWU64 dataset and a BERT classifier, and the results suggest that synonym replacement as a data augmentation technique leads to only minor improvement in accuracy. 
+> 
+> In the fictitious paper, we left some of the methodology details ambiguous. When reproducing the results using the accompanying notebooks, the reader follows a “Choose Your Own Adventure” format, selecting a path through a tree, where each node represents ambiguous methodology details and branches out to different choices that are made at that instance. The leaf nodes will represent the final results, providing insights into the magnitude of the differences resulting from each node selection. Some of the choices that the reader makes are -
+>
+> - what subset of the source dataset to use.
+> - some of the details of data pre-processing.
+> - some of the details of the synonym replacement data augmentation strategy.
+> - some training hyperparameters and the details of the hyperparameter search.
 
-- **Hypothetical research paper**: This paper was written during this project and has been designed in a way to leave many details ambiguous, All these ambiguous details have been obtained by going through different machine learning research papers. The ambiguity in methodology has been designed in a way that the person who is going to reproduce the results has to make choices at a point and that choice may or may not effect the results.
+## Run This Experiment
 
-- **Notebooks**: The notebooks are designed in a way that they cover all the choices and at the end of each notebook you are left with two choices of notebooks, which decided that what choices you made under a given scenario.
-
-  ***
-
-All the specific details regarding running the notebook are mentioned in each of the notebooks.
+- Read the paper [Impact of Data Augmentation on Full few shot learning for intent classification.](/paper_draft.md)
+- Reserve resources on [Chameleon](/notebook/) to reproduce the experiment described in the paper.
+- Follow along with the notebooks provided to run the experiment
 
 
 
