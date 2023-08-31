@@ -23,8 +23,8 @@ Now when calculating n, there is high probability that the value will be a decim
 
 For the data preprocessing we have two notebooks which will focus on both the scenarios taking a ceil value for n and taking a floor value for n.
 
--   [Notebook(DataPreProcess_floor(n))](/3_data_preprocessing_1.ipynb)
+-   [Notebook(DataPreProcess_floor(n))](./3_data_preprocessing_1.ipynb)
 
--   [Notebook(DataPreProcess_ceil(n))](/3_data_preprocessing_2.ipynb)
+-   [Notebook(DataPreProcess_ceil(n))](./3_data_preprocessing_2.ipynb)
 
 :::
