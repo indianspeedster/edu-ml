@@ -201,7 +201,13 @@ node.run('nvcc --version')
 :::
 
 ::: {.cell .markdown}
-Install standard deep learning libraries
+### Install libraries
+
+:::
+
+::: {.cell .markdown}
+
+ Install standard deep learning libraries
 
 :::
 

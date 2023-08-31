@@ -9,9 +9,9 @@ dataprep:
 		 -o notebooks/3_data_preprocessing_2.ipynb
 
 intro: 
-	pandoc --resource-path=markdown/ --embed-resources --standalone --wrap=none -i markdown/intro/1_introduction.md \
+	pandoc --resource-path=markdown/ --embed-resources --standalone --wrap=none -i markdown/intro/1_start_here.md \
 	markdown/intro/footer.md \
-		 -o notebooks/1_introduction.ipynb
+		 -o notebooks/1_start_here.ipynb
 
 dataset:
 	pandoc --resource-path=markdown/ --embed-resources --standalone --wrap=none -i markdown/dataset/2_dataset_1.md \
