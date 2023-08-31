@@ -1,6 +1,6 @@
 # Reproducibility with Incomplete Methodology Descriptions
 
-This work was done under [UCSC OSPO](https://ospo.ucsc.edu/) Summer of Reproducibility and is a part of the project **Reproducibility in machine learning Education** which aims to develop interactive educational materials about reproducibility in machine learning for use in graduate and undergraduate classes. 
+This work was done under [UCSC OSPO](https://ospo.ucsc.edu/) Summer of Reproducibility and is a part of the project **Reproducibility in Machine Learning Education** which aims to develop interactive educational materials about reproducibility in machine learning for use in graduate and undergraduate classes. 
 
 *** 
 

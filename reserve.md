@@ -201,24 +201,32 @@ node.run('nvcc --version')
 :::
 
 ::: {.cell .markdown}
-For this sequence of notebooks, we will require `pytorch`:
+Install standard deep learning libraries
+
 :::
 
 ::: {.cell .code}
 ``` python
-node.run('python3 -m pip install --user torch==2.0.0')
+node.run('python3 -m pip install --user Cython==0.29.32')
+node.run('wget https://raw.githubusercontent.com/teaching-on-testbeds/colab/main/requirements_chameleon_dl.txt -O requirements_chameleon_dl.txt')
+node.run('wget https://raw.githubusercontent.com/teaching-on-testbeds/colab/main/requirements_chameleon.txt -O requirements_chameleon.txt')
+node.run('python3 -m pip install --user -r requirements_chameleon_dl.txt --extra-index-url https://download.pytorch.org/whl/cu113 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html')
+
 ```
 :::
 
-::: {.cell .code}
-``` python
-node.run('python3 -m pip install --user torchvision==0.15.1')
-```
+::: {.cell .markdown}
+Install libraries specific to this project
+
 :::
 
 ::: {.cell .code}
 ``` python
-node.run('python3 -m pip install --user matplotlib')
+node.run('pip install transformers')
+node.run('pip install datasets')
+node.run('pip install accelerate -U')
+node.run('pip install nltk')
+
 ```
 :::
 
@@ -328,7 +336,7 @@ DELETE = False
 
 if DELETE:
     # delete server
-    server_id = chi.server.get_server_id(f"{os.getenv('USER')}-deep-nets")
+    server_id = chi.server.get_server_id(f"{os.getenv('USER')}-edu-ml")
     chi.server.delete_server(server_id)
 
     # release floating IP
