@@ -1,34 +1,29 @@
 ::: {.cell .markdown}
-# Data Augmentation, Preprocessing and Tokenization
+## Data Augmentation, Preprocessing and Tokenization
 
-If you are on this notebook then you have made a choice in the previous section to go ahead with ceil value while calculating n.
-
+If you are on this notebook then you have made a choice in the previous section to go ahead with floor value while calculating n.
 Let's understand this data augmentation strategy in depth with an example,
-
 since alpha is a constant , we will fix alpha as 0.75
 
 example 1: "what do you know about Fringe in Edinburgh next year?"
-
 step1 : count the length of total words without stopwords. So we have l = 7
-
 step2 : calculate n using n = alpha * l, substituting the value of n and alpha we have n = 0.75*7, n = 5.25. 
-
-step3 : Since we choosed to go with the ceil value for n, we will take n = 6.
-
-step4 : we will pick 6 random words and then subsitute them with their synonyms.
+step3 : Since we choosed to go with the floor value for n, we will take n = 5.
+step4 : we will pick 5 random words and then subsitute them with their synonyms.
 
 Now, what difference would it make if we pick the ceil value instead of the floor ?
 
 So, when we see our data, the speech text is short where the number of words lies in the range (4, 16) so one word can make a difference in the model, It is important note that ceil value or floor value while calculating "n" may create an impact in the final results.
 
 Let's implement the augmentation strategy with ceil value of "n" while calculating n = alpha*l
+:::
 
+::: {.cell .markdown}
+## Implementation
 :::
 
 ::: {.cell .markdown}
 ### Importing relevent libraries
-The imports also include libraries which will be used further in different sections of the notebook.
-
 :::
 
 ::: {.cell .code }
@@ -53,7 +48,7 @@ seed=123
 :::
 
 ::: {.cell .markdown}
-#### Data Augmentation function
+### Data Augmentation function
 :::
 
 ::: {.cell .code }
@@ -141,7 +136,7 @@ df_train,val_data=train_test_split(train_data,test_size=0.10 ,random_state=seed,
 :::
 
 ::: {.cell .markdown}
-### Get random 30 samples from training data
+**Get random 30 samples from training data**
 :::
 
 ::: {.cell .code}
@@ -160,16 +155,13 @@ sampled_df.reset_index(drop=True, inplace=True)
 :::
 
 ::: {.cell .markdown}
-### create 3 unique 10-shot dataset from previous sampled data
+**create 3 unique 10-shot dataset from previous sampled data**
 :::
 
 ::: {.cell .code}
 ``` python
 df = sampled_df
-# Create a column sample and mark it all as False and when you pick a sample mark them as True. This will make sure that you are not repeating the same sample again.
 df['sampled'] = False
-
-#creating a list to store the 10 shot dataset
 training_datasets = []
 
 for i in range(3):
@@ -188,29 +180,18 @@ for i in range(3):
     dataset = dataset.reset_index(drop=True)
     training_datasets.append(dataset)
 
-# The output of this cell will create a list training_datasets which contains 3 10-shot dataset
-```
-:::
 
-::: {.cell .markdown}
-### Store data
+```
 :::
 
 ::: {.cell .code}
 ``` python
-with open('training_datasets.pkl', 'wb') as file:
-    pickle.dump(training_datasets, file)
-with open('val_data.pkl', 'wb') as file:
-    pickle.dump(val_data, file)
-with open('test_data.pkl', 'wb') as file:
-    pickle.dump(test_data, file)
-with open('train_data_full.pkl', 'wb') as file:
-    pickle.dump(train_data, file)
+train_data_full = train_data
 ```
 :::
 
 ::: {.cell .markdown}
-## Augmentating data
+### Augmentating data
 
 :::
 
@@ -222,7 +203,7 @@ stop_words = set(stopwords.words('english'))
 :::
 
 ::: {.cell .markdown}
-### Apply data augmentation on each of the three training datasets
+**Apply data augmentation on each of the three training datasets**
 :::
 
 ::: {.cell .code }
@@ -236,7 +217,7 @@ for train_data in training_datasets:
 ```
 :::
 
-## Tokenization
+### Tokenization
 
 Tokenization is a fundamental process in natural language processing that plays an important role in results that any of the language model produces. All the major language models have their specific tokenizer. Since the author of the paper used Bert Large Uncased so for our reproducibility process by default we have only one choice of tokenizer. Below are some of the specific task that Bert Large tokenizer will perform:
 
@@ -254,7 +235,7 @@ In the next section of this notebook we will be implementing the tokenization st
 
 
 ::: {.cell .markdown}
-### Setting up tokenizer
+**Setting up tokenizer**
 :::
 
 ::: {.cell .code}
@@ -267,20 +248,20 @@ BERT_tokenizer=AutoTokenizer.from_pretrained(pre_trained_BERTmodel)
 ::: {.cell .markdown}
 We have below mentioned 5 dataset to tokenize
 
-- **training_datasets** : This contains a list which has 3 full few shot data of 10 samples each.
+- *training_datasets* : This contains a list which has 3 full few shot data of 10 samples each.
 
-- **val_data** : This contains data in the form of a pandas dataframe which will be used as validation data while training the model.
+- *val_data* : This contains data in the form of a pandas dataframe which will be used as validation data while training the model.
 
-- **test_data** : This contains data in the form of a pandas dataframe whille be used as test data for the model.
+- *test_data* : This contains data in the form of a pandas dataframe whille be used as test data for the model.
 
-- **augmented_datasets** : This contains a list of 3 pandas datafram where each dataframe has 20 samples which contains 10 original and 10 augmented version of the original data.
+- *augmented_datasets* : This contains a list of 3 pandas datafram where each dataframe has 20 samples which contains 10 original and 10 augmented version of the original data.
 
 - **train_data_full** : This contains a pandas data frame with entire training data.
 :::
 
 
 ::: {.cell .markdown}
-### Function to tokenize the data
+**Function to tokenize the data**
 :::
 
 ::: {.cell .code}
@@ -292,7 +273,7 @@ def tokenize_data(example):
 :::
 
 ::: {.cell .markdown}
-#### Tokenizing non augmented training data
+**Tokenizing non augmented training data**
 :::
 
 ::: {.cell .code}
@@ -306,7 +287,7 @@ for train_data_ in training_datasets:
 :::
 
 ::: {.cell .markdown}
-#### Tokenizing augmented training data
+**Tokenizing augmented training data**
 :::
 
 ::: {.cell .code}
@@ -320,7 +301,7 @@ for train_data_ in augmented_datasets:
 :::
 
 ::: {.cell .markdown}
-#### Tokenizing validation data
+**Tokenizing validation data**
 :::
 
 ::: {.cell .code}
@@ -332,7 +313,7 @@ val_data = val_data.map(tokenize_data)
 :::
 
 ::: {.cell .markdown}
-#### Tokenizing test data
+**Tokenizing test data**
 :::
 
 ::: {.cell .code}
@@ -343,7 +324,7 @@ test_dataset = testdataset.map(tokenize_data)
 :::
 
 ::: {.cell .markdown}
-#### Tokenize full train dataset
+**Tokenize full train dataset**
 :::
 
 ::: {.cell .code}
@@ -375,7 +356,7 @@ with open('train_dataset_full_tokenized.pkl', 'wb') as file:
 :::
 
 ::: {.cell .markdown}
-## Output of this Notebook
+### Output of this Notebook
 
 This notebook will generate 4 files as mentioned below :
 

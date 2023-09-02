@@ -29,6 +29,11 @@ Next we will try to collect the data and store it in a pandas dataframe and then
 :::
 
 ::: {.cell .markdown}
+## Implementation
+
+:::
+
+::: {.cell .markdown}
 ### importing libraries
 :::
 

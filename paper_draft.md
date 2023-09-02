@@ -14,6 +14,8 @@ Our experiment primarily focus on Few shot Intent classification on HWU 64 datas
 ## Methodology:
 We decided to train an Intent classifier, where the intent is a type of request that a conversational agent supports e.g: the user can ask the agent to set an Alarm, play music, etc. To understand in-depth and compare results we considered training 3 different Intent classifiers.
 
+
+
 - Classifier built on Full data.
 - Classifier build on Few shot data. 
 - Classifier built on Few shot data and augmented data.

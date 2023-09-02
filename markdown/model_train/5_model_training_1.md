@@ -202,7 +202,7 @@ warnings.filterwarnings("ignore")
 :::
 
 ::: {.cell .markdown}
-#### Training Full dataset Model
+**Training Full dataset Model**
 :::
 
 ::: {.cell .code}
@@ -221,7 +221,7 @@ for train_data in train_dataset_full:
 :::
 
 ::: {.cell .markdown}
-#### Training full few shot dataset model
+**Training full few shot dataset model**
 :::
 
 ::: {.cell .code}
@@ -240,7 +240,7 @@ for train_data in train_dataset:
 :::
 
 ::: {.cell .markdown}
-#### Training Model on Full few shot + Augmented dataset {#training-model-on-full-few-shot--augmented-dataset}
+**Training Model on Full few shot + Augmented dataset {#training-model-on-full-few-shot--augmented-dataset}**
 :::
 
 ::: {.cell .code}

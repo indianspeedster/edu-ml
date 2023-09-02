@@ -4,6 +4,7 @@
 If you have selected this notebook then it is assumed that you have selected to go ahead with AdamW (Adam with weight decay) as the optimizer.
 :::
 
+
 ::: {.cell .markdown}
 
 ### Training Parameters and Hyperparameters Explanation
