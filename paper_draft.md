@@ -12,18 +12,6 @@ Prior work [7] has shown that attention mechanism has helped a lot in Natural la
 Our experiment primarily focus on Few shot Intent classification on HWU 64 dataset [3], We primarily focused on 3 scenarios about which we will be discussing further in the methodology section. 
 
 ## Methodology:
-We decided to train an Intent classifier, where the intent is a type of request that a conversational agent supports e.g: the user can ask the agent to set an Alarm, play music, etc. To understand in-depth and compare results we considered training 3 different Intent classifiers.
-
-
-
-- Classifier built on Full data.
-- Classifier build on Few shot data. 
-- Classifier built on Few shot data and augmented data.
-
-One of the important tasks in the process was to decide on an augmentation strategy, Augmentation can be not that difficult when it is done on Image data but when it comes to language data, augmentation can be a daunting task where you have to make sure that the context in the language remains the same.
-In our case, we followed **Synonym Replacement**, The idea was to replace the words in the speech text with their synonyms but the issue was if we replace all the words with their synonyms then there are high chances that the context won't remain the same. So to avoid this we followed the approach mentioned in [8]. It focuses on randomly choosing n words from the sentence that are not stop words and replacing each of these words with one of its synonyms chosen at random.
-But the next issue was that long sentences have more words than short ones, they can absorb more noise while maintaining their original class label. To counter this we went ahead and followed a synonym replacement approach mentioned in [4]. The approach focuses on making n directly proportional to the length of the word and calculating n with the help of a constant "α" and the size of the sentence l. This led us to the formulae n = α * l and the value of "α" lies between 0 and 1.
-This made sure that only a specific ratio of the total words are getting replaced and hence led to high chances of overall context being maintained.
 
 ### Datasets:
 
@@ -55,9 +43,10 @@ For our intent classification model, we used the HWU64 dataset which is a multi-
       <td>1076</td>
     </tr>
   </table>
+  Table 3
 </div>
 
-The source of the data is the official github repository https://github.com/xliuhw/NLU-Evaluation-Data
+The source of the data is the official github repository of the dataset as mentioned in [3].
 
 ### Data Augmentation
 For data augmentation, we followed an augmentation strategy named Synonym Replacement as mentioned in [4]. The idea was to randomly choose n words from the sentence that are not stop words. Replace each of these words with one of its synonyms chosen at random. Since long sentences have more words than short ones, they can absorb more noise while maintaining their original class label. To compensate the authors vary the number of words changed, n, based on the sentence length l with the formula n=αl, where α is a parameter that indicates the percent of the words in a sentence are changed.
@@ -73,7 +62,8 @@ We trained in 3 different setups and we selected a validation set to avoid issue
 
 
 ### Training and Evaluation
-For training, we used BERT(Bidirectional Encoder Representation for Transformers) large model [3]. BERT is a pre-trained language model that can understand the context of words in a sentence by considering the words that come before and after each word. This bidirectional approach allows BERT to capture complex language patterns and meanings, making it highly effective for a wide range of NLP tasks, such as text classification, sentiment analysis, question answering, and more. For our use case, we added a linear classification layer on top of the classifier token. 
+We fine-tune BERT-large [5] on the task of intent classification by adding a linear layer on top of the [CLS] token[9] . In all setups we use the original validation set for tuning the classifier’s training hyperparameters. We chose to use the full validation set as opposed to a few-shot one to avoid issues with unstable hyperparameter tuning and focus on assessing the quality
+of the generated data.
 
 ## Results
 
@@ -102,6 +92,9 @@ Adding more examples through our data augmentation strategy the accuracy moved u
       <td>84.5</td>
     </tr>
   </table>
+ <u>Table 2</u>
+  
+  
   </div>
 
 ## Discussion
@@ -130,6 +123,7 @@ Our study's results have opened up an interesting discussion about why adding mo
       <td>calendar_query</td>
     </tr>
   </table>
+  Table 3
   </div>
 
 Above are some of the examples of the original data and augmented version of the same, When we closely look at the augmented version we see that although the replacement words are synonyms but it's very rare that people use these words to express their intention. For eg, when we see the replacement word for "taxi" is "hack". Although hack is a synonym of taxi as mentioned in Google dictionary but people mostly use hack in terms of tech related subjects. Similarly we can see that "week" is replaced by the word "hebdomad" but again same issue here too, very rare that someone uses hebdomad to refer week.
@@ -140,18 +134,20 @@ To sum up, our study gives us valuable hints about how complex intent classifica
 
 ## References
 
-[1] Sahu, Gaurav, et al. "Data augmentation for intent classification with off-the-shelf large language models."
+[1] Gaurav Sahu, Pau Rodriguez, Issam Laradji, Parmida Atighehchian, David Vazquez, and Dzmitry Bahdanau. 2022. Data Augmentation for Intent Classification with Off-the-shelf Large Language Models. In Proceedings of the 4th Workshop on NLP for Conversational AI, pages 47–57, Dublin, Ireland. Association for Computational Linguistics
 
-[2] Yu, Adams Wei, et al. "Qanet: Combining local convolution with global self-attention for reading comprehension."
+[2] Yu, Adams Wei, David Dohan, Minh-Thang Luong, Rui Zhao, Kai Chen, Mohammad Norouzi, and Quoc V. Le. "Qanet: Combining local convolution with global self-attention for reading comprehension." arXiv preprint arXiv:1804.09541 (2018)
 
-[3] Liu, Xingkun, et al. "Benchmarking natural language understanding services for building conversational agents."
+[3] Liu, Xingkun et al. “Benchmarking Natural Language Understanding Services for building Conversational Agents.” ArXiv abs/1903.05566 (2019): n. pag.
 
-[4] Wei, Jason, and Kai Zou. "Eda: Easy data augmentation techniques for boosting performance on text classification tasks."
+[4] Wei, Jason, and Kai Zou. "Eda: Easy data augmentation techniques for boosting performance on text classification tasks." arXiv preprint arXiv:1901.11196 (2019)
 
-[5] Devlin, Jacob, et al. "Bert: Pre-training of deep bidirectional transformers for language understanding."
+[5] Kenton, Jacob Devlin Ming-Wei Chang, and Lee Kristina Toutanova. "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding." Proceedings of NAACL-HLT. 2019.
 
 [6] Chen, Qian, Zhu Zhuo, and Wen Wang. "Bert for joint intent classification and slot filling." arXiv preprint arXiv:1902.10909 (2019).
 
 [7] Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2014. Neural machine translation by jointly learning to align and translate. CoRR, abs/1409.0473.
 
-[8] Bonthu, Sridevi, et al. "Effective text augmentation strategy for nlp models." Proceedings of Third International Conference on Sustainable Computing: SUSCOM 2021. Springer Singapore, 2022
+[8] Bonthu, Sridevi, et al. "Effective text augmentation strategy for nlp models." Proceedings of Third International Conference on Sustainable Computing: SUSCOM 2021. Springer Singapore, 2022.
+
+[9] Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, Rémi Louf, Morgan Funtowicz, et al. 2019. Huggingface’s transformers: State-of-the-art natural language processing. arXiv preprint arXiv:1910.03771.
