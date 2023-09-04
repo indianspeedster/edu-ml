@@ -43,7 +43,7 @@ For our intent classification model, we used the HWU64 dataset which is a multi-
       <td>1076</td>
     </tr>
   </table>
-  Table 3
+  Table 1
 </div>
 
 The source of the data is the official github repository of the dataset as mentioned in [3].
