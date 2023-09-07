@@ -17,7 +17,7 @@ This work was done under [UCSC OSPO](https://ospo.ucsc.edu/) Summer of Reproduci
 
 ## Run This Experiment
 
-- Read the paper [Impact of Data Augmentation on Full few shot learning for intent classification.](/paper_draft.md)
+- Read the paper [Impact of Data Augmentation on Full few shot learning for intent classification.](/paper.md)
 - Reserve resources on [Chameleon](/notebook/) to reproduce the experiment described in the paper.
 - Follow along with the notebooks provided to run the experiment
 
